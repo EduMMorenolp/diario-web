@@ -1,0 +1,82 @@
+/* Tokens de diseño de LaDiarIA — sistema "Guardian-moderno" (sans + color por sección) */
+
+:root {
+  /* ---- Color: tema claro ---- */
+  --color-ink: #111113;
+  --color-ink-2: #3a3a40;
+  --color-ink-3: #6b6b74;
+  --color-ink-4: #9c9ca6;
+  --color-paper: #ffffff;
+  --color-paper-2: #f4f4f2;
+  --color-paper-3: #ecece8;
+  --color-line: #e4e4df;
+  --color-accent: #1656a1;
+  --color-inverse: #ffffff;
+
+  /* Colores por sección (referencia; el portal usa el color real de cada categoría) */
+  --section-noticias: #1656a1;
+  --section-lenguajes: #15803d;
+  --section-frameworks: #7c3aed;
+  --section-devops: #c2410c;
+  --section-ia: #0f766e;
+  --section-seguridad: #d23b2c;
+
+  /* Tipografía — roles */
+  --font-ui: "Inter", system-ui, sans-serif;
+  --font-display: "Archivo", system-ui, sans-serif;
+  --font-body: "Source Serif 4", Georgia, serif;
+
+  /* Escala tipográfica (pico móvil->escritorio) */
+  --text-xxs: 0.75rem;
+  --text-xs: 0.82rem;
+  --text-sm: 0.9rem;
+  --text-base: 1rem;
+  --text-lg: 1.15rem;
+  --text-xl: 1.35rem;
+  --text-2xl: clamp(1.6rem, 2.4vw, 2rem);
+  --text-3xl: clamp(2rem, 3.4vw, 2.9rem);
+  --text-4xl: clamp(2.4rem, 4.6vw, 3.8rem);
+  --text-5xl: clamp(3rem, 6vw, 5rem);
+
+  /* Ritmo vertical (baseline 8px) y medidas */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --site-max: 1240px;
+  --measure-text: 66ch;
+
+  --line-hide: 1.5;
+  --line-tight: 1.12;
+
+  --radius: 4px;
+  --shadow: 0 1px 3px rgb(0 0 0 / 0.08);
+}
+
+html[data-theme="dark"] {
+  --color-ink: #f2f2f0;
+  --color-ink-2: #c4c4c8;
+  --color-ink-3: #90909a;
+  --color-ink-4: #6b6b74;
+  --color-paper: #17171a;
+  --color-paper-2: #1e1e22;
+  --color-paper-3: #26262b;
+  --color-line: #2f2f35;
+  --color-accent: #8ab4ff;
+  --color-onverse: #111113;
+}
+
+:root {
+  --color-line: #e6e6e1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

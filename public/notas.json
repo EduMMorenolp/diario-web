@@ -1,0 +1,177 @@
+{
+  "generatedAt": "2026-08-15T21:00:00.546Z",
+  "updatedAt": "2026-08-15T21:00:00.546Z",
+  "noteCount": 1,
+  "edition": {
+    "slug": "2026-08-15-manana",
+    "label": "Edición mañana",
+    "date": "2026-08-15",
+    "slot": "manana",
+    "publishedAt": "2026-08-15T20:52:03.000Z",
+    "briefing": "Briefing de prueba",
+    "featuredNoteSlug": null
+  },
+  "editions": [
+    {
+      "slug": "2026-08-15-manana",
+      "label": "Edición mañana",
+      "date": "2026-08-15",
+      "slot": "manana",
+      "noteCount": 1
+    },
+    {
+      "slug": "2026-08-15-mediodia",
+      "label": "Edición mediodía",
+      "date": "2026-08-15",
+      "slot": "mediodia",
+      "noteCount": 0
+    },
+    {
+      "slug": "2026-08-15-tarde",
+      "label": "Edición tarde",
+      "date": "2026-08-15",
+      "slot": "tarde",
+      "noteCount": 0
+    },
+    {
+      "slug": "2026-08-15-noche",
+      "label": "Edición noche",
+      "date": "2026-08-15",
+      "slot": "noche",
+      "noteCount": 0
+    },
+    {
+      "slug": "2026-08-09-manana",
+      "label": "Edición mañana",
+      "date": "2026-08-09",
+      "slot": "manana",
+      "noteCount": 0
+    },
+    {
+      "slug": "2026-08-09-mediodia",
+      "label": "Edición mediodía",
+      "date": "2026-08-09",
+      "slot": "mediodia",
+      "noteCount": 0
+    },
+    {
+      "slug": "2026-08-09-tarde",
+      "label": "Edición tarde",
+      "date": "2026-08-09",
+      "slot": "tarde",
+      "noteCount": 0
+    },
+    {
+      "slug": "2026-08-09-noche",
+      "label": "Edición noche",
+      "date": "2026-08-09",
+      "slot": "noche",
+      "noteCount": 0
+    }
+  ],
+  "categories": [
+    {
+      "id": 3,
+      "slug": "actualidad",
+      "name": "Actualidad",
+      "color": "#1656a1",
+      "position": 0,
+      "blurb": null
+    },
+    {
+      "id": 9,
+      "slug": "portada",
+      "name": "Portada",
+      "color": "#1c1c1e",
+      "position": 0,
+      "blurb": "Lo destacado del dia para quienes programan"
+    },
+    {
+      "id": 2,
+      "slug": "tecnologia",
+      "name": "Tecnologia",
+      "color": "#1656a1",
+      "position": 0,
+      "blurb": null
+    },
+    {
+      "id": 1,
+      "slug": "noticias",
+      "name": "Noticias",
+      "color": "#1656a1",
+      "position": 1,
+      "blurb": "Ultimas novedades del mundo tech"
+    },
+    {
+      "id": 10,
+      "slug": "frontend",
+      "name": "Frontend",
+      "color": "#7c3aed",
+      "position": 2,
+      "blurb": "React, CSS, Vite y el ecosistema del navegador"
+    },
+    {
+      "id": 11,
+      "slug": "backend",
+      "name": "Backend",
+      "color": "#0f766e",
+      "position": 3,
+      "blurb": "APIs, bases de datos y arquitectura de servidor"
+    },
+    {
+      "id": 12,
+      "slug": "datos",
+      "name": "Datos & IA",
+      "color": "#c026d3",
+      "position": 4,
+      "blurb": "ML, inferencia, datasets y analitica"
+    },
+    {
+      "id": 6,
+      "slug": "devops",
+      "name": "DevOps",
+      "color": "#c2410c",
+      "position": 5,
+      "blurb": "Cloud, contenedores y observabilidad"
+    },
+    {
+      "id": 8,
+      "slug": "seguridad",
+      "name": "Seguridad",
+      "color": "#d23b2c",
+      "position": 6,
+      "blurb": "Vulnerabilidades, buenas practicas y ciberseguridad"
+    },
+    {
+      "id": 13,
+      "slug": "herramientas",
+      "name": "Herramientas & Open Source",
+      "color": "#15803d",
+      "position": 7,
+      "blurb": "Releases, repos destacados, CLIs e IDEs"
+    }
+  ],
+  "notes": [
+    {
+      "slug": "nota-de-prueba-bienvenida",
+      "title": "Bienvenido a LaDiarIA",
+      "kicker": null,
+      "summary": "Nota de ejemplo generada como seed para probar el flujo editorial.",
+      "body": "Esta es una nota de prueba creada por el seed, no por el batallon de agentes.\n\nPara probar el pipeline de IA, abri el CMS, pega una URL de noticia en la bandeja y toca \"Generar con IA\": opencode (redactor, editor y jefe de redaccion) produce el borrador.\n\nLuego aproba y publica la nota, y el exportador la llevara a notas.json del diario.",
+      "author": "LaDiarIA",
+      "authorName": "LaDiarIA",
+      "editionSlug": null,
+      "sectionSlug": "noticias",
+      "sectionName": "Noticias",
+      "tags": [],
+      "cover": null,
+      "coverAlt": "Bienvenido a LaDiarIA",
+      "featured": false,
+      "readingTime": 1,
+      "imageUrl": null,
+      "materialUrl": null,
+      "publishedAt": "2026-08-08T04:33:34.000Z",
+      "updatedAt": "2026-08-08T01:33:34.000Z"
+    }
+  ]
+}
