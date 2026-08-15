@@ -9,11 +9,11 @@ interface CategoryInfo {
   color: string;
 }
 
-/** Agrupa notas de una edicion por seccion, respetando el orden de `categories`. */
+/** Agrupa notas de una edicion por compania, respetando el orden de `categories`. */
 function groupBySection(notes: DiarioNota[], categories: CategoryInfo[]) {
   const sections = new Map<string, DiarioNota[]>();
   for (const n of notes) {
-    const key = n.sectionSlug ?? n.sectionName ?? "otras";
+    const key = n.companySlug ?? n.sectionSlug ?? n.sectionName ?? "otras";
     const arr = sections.get(key) ?? [];
     arr.push(n);
     sections.set(key, arr);
@@ -23,7 +23,11 @@ function groupBySection(notes: DiarioNota[], categories: CategoryInfo[]) {
   const extraKeys = [...sections.keys()].filter((s) => !orderedKeys.includes(s));
   return [...orderedKeys, ...extraKeys].map((key) => ({
     key,
-    name: names.get(key) ?? sections.get(key)?.[0]?.sectionName ?? key,
+    name:
+      names.get(key) ??
+      sections.get(key)?.[0]?.companyName ??
+      sections.get(key)?.[0]?.sectionName ??
+      key,
     notes: sections.get(key) ?? [],
   }));
 }

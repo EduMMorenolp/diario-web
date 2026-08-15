@@ -3,6 +3,7 @@ import { Masthead } from "./components/Masthead";
 import { SectionNav } from "./components/SectionNav";
 import { useNotas } from "./hooks/useNotas";
 import { useUi } from "./hooks/useUi";
+import { Company } from "./pages/Company";
 import { Ediciones } from "./pages/Ediciones";
 import { Home } from "./pages/Home";
 import { Nota } from "./pages/Nota";
@@ -48,6 +49,8 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/empresa/:companySlug" element={<Company />} />
+          <Route path="/empresa/:companySlug/:modelSlug" element={<Company />} />
           <Route path="/seccion/:slug" element={<Section />} />
           <Route path="/ediciones" element={<Ediciones />} />
           <Route path="/nota/:slug" element={<Nota />} />

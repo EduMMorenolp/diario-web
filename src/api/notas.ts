@@ -1,9 +1,18 @@
+export interface DiarioModel {
+  slug: string;
+  name: string;
+  color: string;
+  blurb: string | null;
+}
+
 export interface DiarioCategory {
   slug: string;
   name: string;
   color: string;
   /** Conste editorial corta de la seccion. Puede faltar hasta que el backend lo exporte. */
   blurb: string | null;
+  /** Modelos hijos (jerarquia compania -> modelo). */
+  models?: DiarioModel[];
 }
 
 export interface DiarioEditionSummary {
@@ -34,6 +43,10 @@ export interface DiarioNota {
   authorName: string | null;
   sectionSlug: string | null;
   sectionName: string | null;
+  companySlug: string | null;
+  companyName: string | null;
+  modelSlug: string | null;
+  modelName: string | null;
   editionSlug: string | null;
   tags: string[];
   cover: string | null;
@@ -75,6 +88,10 @@ export function normalizeNota(n: Record<string, unknown>): DiarioNota {
     authorName: str(n.authorName),
     sectionSlug: str(n.sectionSlug),
     sectionName: str(n.sectionName),
+    companySlug: str(n.companySlug),
+    companyName: str(n.companyName),
+    modelSlug: str(n.modelSlug),
+    modelName: str(n.modelName),
     editionSlug: str(n.editionSlug),
     tags: list(n.tags),
     cover: str(n.cover),
@@ -89,11 +106,22 @@ export function normalizeNota(n: Record<string, unknown>): DiarioNota {
 }
 
 function normalizeCategory(c: Record<string, unknown>): DiarioCategory {
+  const rawModels = Array.isArray(c.models) ? c.models : [];
+  const models = rawModels
+    .map((m) => (m && typeof m === "object" ? (m as Record<string, unknown>) : null))
+    .filter((m): m is Record<string, unknown> => m !== null)
+    .map((m) => ({
+      slug: String(m.slug ?? ""),
+      name: String(m.name ?? ""),
+      color: String(m.color ?? c.color ?? ""),
+      blurb: str(m.blurb),
+    }));
   return {
     slug: String(c.slug ?? ""),
     name: String(c.name ?? ""),
     color: String(c.color ?? ""),
     blurb: str(c.blurb),
+    models: models.length > 0 ? models : undefined,
   };
 }
 

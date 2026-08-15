@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>LaDiarIA — Noticias</title>
-    <link>https://example.com/LaDiarIA/seccion/noticias</link>
+    <link>https://example.com/LaDiarIA/empresa/noticias</link>
     <description>Ultimas novedades del mundo tech</description>
     <language>es-AR</language>
     <lastBuildDate>Sat, 15 Aug 2026 22:47:30 GMT</lastBuildDate>

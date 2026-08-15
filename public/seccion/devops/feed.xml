@@ -3,9 +3,9 @@
   <channel>
     <title>LaDiarIA — DevOps</title>
     <link>https://example.com/LaDiarIA/seccion/devops</link>
-    <description>DevOps en el diario LaDiarIA.</description>
+    <description>Cloud, contenedores y observabilidad</description>
     <language>es-AR</language>
-    <lastBuildDate>Sat, 08 Aug 2026 23:35:35 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 15 Aug 2026 22:47:30 GMT</lastBuildDate>
     <atom:link href="https://example.com/LaDiarIA/feed.xml" rel="self" type="application/rss+xml"/>
 
   </channel>

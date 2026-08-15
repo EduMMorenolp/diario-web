@@ -76,25 +76,73 @@ try {
 
 const notes = Array.isArray(payload.notes) ? payload.notes : [];
 // feed del sitio (portada / edicion vigente)
-writeFileSync(join(publicDir, "feed.xml"), channel({
-  title: SITE_NAME,
-  desc: SITE_DESC,
-  link: SITE_BASE,
-  notes,
-}), "utf8");
+writeFileSync(
+  join(publicDir, "feed.xml"),
+  channel({
+    title: SITE_NAME,
+    desc: SITE_DESC,
+    link: SITE_BASE,
+    notes,
+  }),
+  "utf8",
+);
 
-// feed por seccion
+// feed por compania y por modelo (jerarquia compania -> modelo)
 const categories = Array.isArray(payload.categories) ? payload.categories : [];
+for (const company of categories) {
+  const companyNotes = notes.filter(
+    (n) => n.companySlug === company.slug || n.sectionSlug === company.slug,
+  );
+  // feed por compania
+  const companyDir = join(publicDir, "empresa", company.slug);
+  mkdirSync(companyDir, { recursive: true });
+  writeFileSync(
+    join(companyDir, "feed.xml"),
+    channel({
+      title: `${SITE_NAME} — ${company.name}`,
+      desc: company.blurb ?? `${company.name} en el diario ${SITE_NAME}.`,
+      link: `${SITE_BASE}/empresa/${company.slug}`,
+      notes: companyNotes,
+    }),
+    "utf8",
+  );
+
+  // feed por modelo
+  const models = Array.isArray(company.models) ? company.models : [];
+  for (const model of models) {
+    const modelNotes = companyNotes.filter((n) => n.modelSlug === model.slug);
+    const modelDir = join(companyDir, model.slug);
+    mkdirSync(modelDir, { recursive: true });
+    writeFileSync(
+      join(modelDir, "feed.xml"),
+      channel({
+        title: `${SITE_NAME} — ${company.name} / ${model.name}`,
+        desc: model.blurb ?? `${model.name} de ${company.name} en ${SITE_NAME}.`,
+        link: `${SITE_BASE}/empresa/${company.slug}/${model.slug}`,
+        notes: modelNotes,
+      }),
+      "utf8",
+    );
+  }
+}
+
+// feed por seccion (retrocompat: categorias raiz planas)
 for (const cat of categories) {
-  const sectionNotes = notes.filter((n) => n.sectionSlug === cat.slug || n.sectionName === cat.name);
+  const sectionNotes = notes.filter(
+    (n) => n.sectionSlug === cat.slug || n.sectionName === cat.name,
+  );
   const dir = join(publicDir, "seccion", cat.slug);
   mkdirSync(dir, { recursive: true });
-  writeFileSync(join(dir, "feed.xml"), channel({
-    title: `${SITE_NAME} — ${cat.name}`,
-    desc: cat.blurb ?? `${cat.name} en el diario ${SITE_NAME}.`,
-    link: `${SITE_BASE}/seccion/${cat.slug}`,
-    notes: sectionNotes,
-  }), "utf8");
+  writeFileSync(
+    join(dir, "feed.xml"),
+    channel({
+      title: `${SITE_NAME} — ${cat.name}`,
+      desc: cat.blurb ?? `${cat.name} en el diario ${SITE_NAME}.`,
+      link: `${SITE_BASE}/seccion/${cat.slug}`,
+      notes: sectionNotes,
+    }),
+    "utf8",
+  );
 }
 
 console.log("[scgen] feeds generados en public/");
