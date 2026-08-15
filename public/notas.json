@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-15T22:52:44.887Z",
-  "updatedAt": "2026-08-15T22:52:44.887Z",
+  "generatedAt": "2026-08-15T22:54:01.613Z",
+  "updatedAt": "2026-08-15T22:54:01.613Z",
   "noteCount": 1,
   "edition": {
     "slug": "2026-08-15-manana",
@@ -300,8 +300,8 @@
       "editionSlug": null,
       "sectionSlug": "openai",
       "sectionName": "OpenAI",
-      "companySlug": null,
-      "companyName": null,
+      "companySlug": "openai",
+      "companyName": "OpenAI",
       "modelSlug": null,
       "modelName": null,
       "tags": [],
