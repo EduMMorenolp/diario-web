@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-15T21:00:00.546Z",
-  "updatedAt": "2026-08-15T21:00:00.546Z",
-  "noteCount": 1,
+  "generatedAt": "2026-08-15T22:51:35.829Z",
+  "updatedAt": "2026-08-15T22:51:35.829Z",
+  "noteCount": 6,
   "edition": {
     "slug": "2026-08-15-manana",
     "label": "Edición mañana",
     "date": "2026-08-15",
     "slot": "manana",
-    "publishedAt": "2026-08-15T20:52:03.000Z",
-    "briefing": "Briefing de prueba",
+    "publishedAt": "2026-08-15T21:59:21.000Z",
+    "briefing": "Resumen editorial de prueba",
     "featuredNoteSlug": null
   },
   "editions": [
@@ -17,7 +17,7 @@
       "label": "Edición mañana",
       "date": "2026-08-15",
       "slot": "manana",
-      "noteCount": 1
+      "noteCount": 5
     },
     {
       "slug": "2026-08-15-mediodia",
@@ -76,7 +76,9 @@
       "name": "Actualidad",
       "color": "#1656a1",
       "position": 0,
-      "blurb": null
+      "blurb": null,
+      "parentId": null,
+      "models": []
     },
     {
       "id": 9,
@@ -84,7 +86,9 @@
       "name": "Portada",
       "color": "#1c1c1e",
       "position": 0,
-      "blurb": "Lo destacado del dia para quienes programan"
+      "blurb": "Lo destacado del dia en inteligencia artificial",
+      "parentId": null,
+      "models": []
     },
     {
       "id": 2,
@@ -92,66 +96,344 @@
       "name": "Tecnologia",
       "color": "#1656a1",
       "position": 0,
-      "blurb": null
+      "blurb": null,
+      "parentId": null,
+      "models": []
     },
     {
-      "id": 1,
-      "slug": "noticias",
-      "name": "Noticias",
-      "color": "#1656a1",
+      "id": 19,
+      "slug": "openai",
+      "name": "OpenAI",
+      "color": "#10a37f",
       "position": 1,
-      "blurb": "Ultimas novedades del mundo tech"
+      "blurb": "Modelos GPT, o-series, Sora y productos de OpenAI",
+      "parentId": null,
+      "models": [
+        {
+          "id": 20,
+          "slug": "gpt",
+          "name": "GPT",
+          "color": "#10a37f",
+          "position": 0,
+          "blurb": "GPT-4o, GPT-5 y la familia GPT",
+          "parentId": 19,
+          "models": []
+        },
+        {
+          "id": 21,
+          "slug": "o-series",
+          "name": "o-series",
+          "color": "#10a37f",
+          "position": 0,
+          "blurb": "Modelos de razonamiento o1, o3, o4",
+          "parentId": 19,
+          "models": []
+        },
+        {
+          "id": 22,
+          "slug": "sora",
+          "name": "Sora",
+          "color": "#10a37f",
+          "position": 0,
+          "blurb": "Generacion de video con IA",
+          "parentId": 19,
+          "models": []
+        }
+      ]
     },
     {
-      "id": 10,
-      "slug": "frontend",
-      "name": "Frontend",
-      "color": "#7c3aed",
+      "id": 23,
+      "slug": "google-deepmind",
+      "name": "Google DeepMind",
+      "color": "#4285f4",
       "position": 2,
-      "blurb": "React, CSS, Vite y el ecosistema del navegador"
+      "blurb": "Gemini, Gemma e investigacion de Google DeepMind",
+      "parentId": null,
+      "models": [
+        {
+          "id": 24,
+          "slug": "gemini",
+          "name": "Gemini",
+          "color": "#4285f4",
+          "position": 0,
+          "blurb": "Modelos Gemini 2.x y 3.x",
+          "parentId": 23,
+          "models": []
+        },
+        {
+          "id": 25,
+          "slug": "gemma",
+          "name": "Gemma",
+          "color": "#4285f4",
+          "position": 0,
+          "blurb": "Modelos abiertos Gemma",
+          "parentId": 23,
+          "models": []
+        }
+      ]
     },
     {
-      "id": 11,
-      "slug": "backend",
-      "name": "Backend",
-      "color": "#0f766e",
+      "id": 26,
+      "slug": "anthropic",
+      "name": "Anthropic",
+      "color": "#d4a574",
       "position": 3,
-      "blurb": "APIs, bases de datos y arquitectura de servidor"
+      "blurb": "Claude y la investigacion de Anthropic",
+      "parentId": null,
+      "models": [
+        {
+          "id": 27,
+          "slug": "claude",
+          "name": "Claude",
+          "color": "#d4a574",
+          "position": 0,
+          "blurb": "Modelos Claude 3.x y Claude 4",
+          "parentId": 26,
+          "models": []
+        },
+        {
+          "id": 28,
+          "slug": "claude-app",
+          "name": "Claude App",
+          "color": "#d4a574",
+          "position": 0,
+          "blurb": "Productos Claude (Code, Artifacts)",
+          "parentId": 26,
+          "models": []
+        }
+      ]
     },
     {
-      "id": 12,
-      "slug": "datos",
-      "name": "Datos & IA",
-      "color": "#c026d3",
+      "id": 29,
+      "slug": "meta-ai",
+      "name": "Meta AI",
+      "color": "#0668e1",
       "position": 4,
-      "blurb": "ML, inferencia, datasets y analitica"
+      "blurb": "Llama y la investigacion de Meta AI",
+      "parentId": null,
+      "models": [
+        {
+          "id": 30,
+          "slug": "llama",
+          "name": "Llama",
+          "color": "#0668e1",
+          "position": 0,
+          "blurb": "Modelos abiertos Llama 3 y Llama 4",
+          "parentId": 29,
+          "models": []
+        }
+      ]
     },
     {
-      "id": 6,
-      "slug": "devops",
-      "name": "DevOps",
-      "color": "#c2410c",
+      "id": 31,
+      "slug": "mistral",
+      "name": "Mistral AI",
+      "color": "#f7a842",
       "position": 5,
-      "blurb": "Cloud, contenedores y observabilidad"
+      "blurb": "Modelos de Mistral, Codestral y europeos",
+      "parentId": null,
+      "models": [
+        {
+          "id": 33,
+          "slug": "codestral",
+          "name": "Codestral",
+          "color": "#f7a842",
+          "position": 0,
+          "blurb": "Modelos para codigo",
+          "parentId": 31,
+          "models": []
+        },
+        {
+          "id": 32,
+          "slug": "mistral-large",
+          "name": "Mistral Large",
+          "color": "#f7a842",
+          "position": 0,
+          "blurb": "Modelos propietarios Large",
+          "parentId": 31,
+          "models": []
+        }
+      ]
     },
     {
-      "id": 8,
-      "slug": "seguridad",
-      "name": "Seguridad",
-      "color": "#d23b2c",
+      "id": 34,
+      "slug": "xai",
+      "name": "xAI",
+      "color": "#1d9bf0",
       "position": 6,
-      "blurb": "Vulnerabilidades, buenas practicas y ciberseguridad"
+      "blurb": "Grok y la investigacion de xAI",
+      "parentId": null,
+      "models": [
+        {
+          "id": 35,
+          "slug": "grok",
+          "name": "Grok",
+          "color": "#1d9bf0",
+          "position": 0,
+          "blurb": "Modelos Grok",
+          "parentId": 34,
+          "models": []
+        }
+      ]
     },
     {
-      "id": 13,
-      "slug": "herramientas",
-      "name": "Herramientas & Open Source",
-      "color": "#15803d",
+      "id": 36,
+      "slug": "deepseek",
+      "name": "DeepSeek",
+      "color": "#4d6bfe",
       "position": 7,
-      "blurb": "Releases, repos destacados, CLIs e IDEs"
+      "blurb": "DeepSeek-V y DeepSeek-R, modelos abiertos",
+      "parentId": null,
+      "models": [
+        {
+          "id": 38,
+          "slug": "deepseek-r",
+          "name": "DeepSeek-R",
+          "color": "#4d6bfe",
+          "position": 0,
+          "blurb": "Modelos de razonamiento R1",
+          "parentId": 36,
+          "models": []
+        },
+        {
+          "id": 37,
+          "slug": "deepseek-v",
+          "name": "DeepSeek-V",
+          "color": "#4d6bfe",
+          "position": 0,
+          "blurb": "Modelos de chat DeepSeek-V3 y V4",
+          "parentId": 36,
+          "models": []
+        }
+      ]
     }
   ],
   "notes": [
+    {
+      "slug": "bienvenida-diario-de-ia",
+      "title": "Bienvenido a LaDiarIA",
+      "kicker": null,
+      "summary": "Nota de ejemplo del nuevo diario de inteligencia artificial.",
+      "body": "LaDiarIA ahora es un diario enfocado en noticias de inteligencia artificial.\n\nLas secciones estan organizadas por compania (OpenAI, Google DeepMind, Anthropic, Meta, Mistral, xAI y DeepSeek) y dentro de cada una, por modelo.\n\nCada compania tiene un scraper propio que ingesta el blog oficial, y el batallon de agentes (redactor, editor y jefe de redaccion) genera los borradores que luego un humano revisa y aprueba.",
+      "author": "LaDiarIA",
+      "authorName": "LaDiarIA",
+      "editionSlug": null,
+      "sectionSlug": "openai",
+      "sectionName": "OpenAI",
+      "companySlug": null,
+      "companyName": null,
+      "modelSlug": null,
+      "modelName": null,
+      "tags": [],
+      "cover": null,
+      "coverAlt": "Bienvenido a LaDiarIA",
+      "featured": false,
+      "readingTime": 1,
+      "imageUrl": null,
+      "materialUrl": null,
+      "publishedAt": "2026-08-15T22:31:56.000Z",
+      "updatedAt": "2026-08-15T19:31:56.000Z"
+    },
+    {
+      "slug": "workflow-test-1786831161552-0tv1",
+      "title": "Workflow-test-1786831161552-0tv1",
+      "kicker": null,
+      "summary": null,
+      "body": "Body del workflow",
+      "author": "LaDiarIA",
+      "authorName": "LaDiarIA",
+      "editionSlug": null,
+      "sectionSlug": null,
+      "sectionName": null,
+      "companySlug": null,
+      "companyName": null,
+      "modelSlug": null,
+      "modelName": null,
+      "tags": [],
+      "cover": null,
+      "coverAlt": "Workflow-test-1786831161552-0tv1",
+      "featured": false,
+      "readingTime": 1,
+      "imageUrl": null,
+      "materialUrl": null,
+      "publishedAt": "2026-08-15T21:59:22.000Z",
+      "updatedAt": "2026-08-15T21:59:22.000Z"
+    },
+    {
+      "slug": "workflow-test-1786831120851-w7si",
+      "title": "Workflow-test-1786831120851-w7si",
+      "kicker": null,
+      "summary": null,
+      "body": "Body del workflow",
+      "author": "LaDiarIA",
+      "authorName": "LaDiarIA",
+      "editionSlug": null,
+      "sectionSlug": null,
+      "sectionName": null,
+      "companySlug": null,
+      "companyName": null,
+      "modelSlug": null,
+      "modelName": null,
+      "tags": [],
+      "cover": null,
+      "coverAlt": "Workflow-test-1786831120851-w7si",
+      "featured": false,
+      "readingTime": 1,
+      "imageUrl": null,
+      "materialUrl": null,
+      "publishedAt": "2026-08-15T21:58:42.000Z",
+      "updatedAt": "2026-08-15T21:58:42.000Z"
+    },
+    {
+      "slug": "workflow-test-1786830962437-f2bc",
+      "title": "Workflow-test-1786830962437-f2bc",
+      "kicker": null,
+      "summary": null,
+      "body": "Body del workflow",
+      "author": "LaDiarIA",
+      "authorName": "LaDiarIA",
+      "editionSlug": null,
+      "sectionSlug": null,
+      "sectionName": null,
+      "companySlug": null,
+      "companyName": null,
+      "modelSlug": null,
+      "modelName": null,
+      "tags": [],
+      "cover": null,
+      "coverAlt": "Workflow-test-1786830962437-f2bc",
+      "featured": false,
+      "readingTime": 1,
+      "imageUrl": null,
+      "materialUrl": null,
+      "publishedAt": "2026-08-15T21:56:03.000Z",
+      "updatedAt": "2026-08-15T21:56:03.000Z"
+    },
+    {
+      "slug": "workflow-test-1786830926970-0equ",
+      "title": "Workflow-test-1786830926970-0equ",
+      "kicker": null,
+      "summary": null,
+      "body": "Body del workflow",
+      "author": "LaDiarIA",
+      "authorName": "LaDiarIA",
+      "editionSlug": null,
+      "sectionSlug": null,
+      "sectionName": null,
+      "companySlug": null,
+      "companyName": null,
+      "modelSlug": null,
+      "modelName": null,
+      "tags": [],
+      "cover": null,
+      "coverAlt": "Workflow-test-1786830926970-0equ",
+      "featured": false,
+      "readingTime": 1,
+      "imageUrl": null,
+      "materialUrl": null,
+      "publishedAt": "2026-08-15T21:55:27.000Z",
+      "updatedAt": "2026-08-15T21:55:27.000Z"
+    },
     {
       "slug": "nota-de-prueba-bienvenida",
       "title": "Bienvenido a LaDiarIA",
@@ -161,8 +443,12 @@
       "author": "LaDiarIA",
       "authorName": "LaDiarIA",
       "editionSlug": null,
-      "sectionSlug": "noticias",
-      "sectionName": "Noticias",
+      "sectionSlug": null,
+      "sectionName": null,
+      "companySlug": null,
+      "companyName": null,
+      "modelSlug": null,
+      "modelName": null,
       "tags": [],
       "cover": null,
       "coverAlt": "Bienvenido a LaDiarIA",
