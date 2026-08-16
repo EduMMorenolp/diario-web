@@ -2,3 +2,8 @@ node_modules/
 dist/
 .env
 *.log
+
+# Feeds RSS: artefactos derivados de notas.json, regenerados en cada build (generate-feeds.mjs)
+public/feed.xml
+public/empresa/
+public/seccion/
