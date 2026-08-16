@@ -4,8 +4,8 @@
   /* ---- Color: tema claro ---- */
   --color-ink: #111113;
   --color-ink-2: #3a3a40;
-  --color-ink-3: #6b6b74;
-  --color-ink-4: #9c9ca6;
+  --color-ink-3: #5f5f69;
+  --color-ink-4: #84848e;
   --color-paper: #ffffff;
   --color-paper-2: #f4f4f2;
   --color-paper-3: #ecece8;
@@ -60,8 +60,8 @@
 html[data-theme="dark"] {
   --color-ink: #f2f2f0;
   --color-ink-2: #c4c4c8;
-  --color-ink-3: #90909a;
-  --color-ink-4: #6b6b74;
+  --color-ink-3: #9b9ba5;
+  --color-ink-4: #7a7a84;
   --color-paper: #17171a;
   --color-paper-2: #1e1e22;
   --color-paper-3: #26262b;

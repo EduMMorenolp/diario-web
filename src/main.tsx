@@ -7,7 +7,10 @@ import "./styles/layout.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <BrowserRouter basename="/LaDiarIA/">
+    <BrowserRouter
+      basename="/LaDiarIA/"
+      future={{ v7_startTransition: true, v7_relativeSplatPath: true }}
+    >
       <App />
     </BrowserRouter>
   </React.StrictMode>,

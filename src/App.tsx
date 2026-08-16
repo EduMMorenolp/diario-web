@@ -10,27 +10,82 @@ import { Nota } from "./pages/Nota";
 import { Section } from "./pages/Section";
 
 function Toolbar() {
-  const { theme, toggleTheme, cycleFont } = useUi();
-  const label = `Cambiar a modo ${theme === "dark" ? "claro" : "oscuro"}`;
+  const { theme, font, toggleTheme, cycleFont } = useUi();
+  const themeLabel = `Cambiar a modo ${theme === "dark" ? "claro" : "oscuro"}`;
+  const fontLabel = `Tamaño de letra: ${font === "" ? "normal" : font === "a" ? "grande" : "muy grande"}`;
   return (
     <div className="toolbar">
       <button
         type="button"
-        className="toolbar-btn"
+        className="toolbar-btn toolbar-btn--icon"
         onClick={cycleFont}
-        title="Cambiar tamaño de letra"
-        aria-label="Cambiar tamaño de letra"
+        title={fontLabel}
+        aria-label={fontLabel}
+        aria-pressed={font !== ""}
       >
-        A±
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M4 7V4h16v3" />
+          <path d="M9 20h6" />
+          <path d="M12 4v16" />
+        </svg>
+        <span className="toolbar-size" aria-hidden="true">
+          {font === "" ? "A" : font === "a" ? "A" : "A"}
+        </span>
       </button>
       <button
         type="button"
-        className="toolbar-btn theme-toggle"
+        className="toolbar-btn toolbar-btn--icon theme-toggle"
         onClick={toggleTheme}
-        aria-label={label}
-        title={label}
+        aria-label={themeLabel}
+        title={themeLabel}
       >
-        {theme === "dark" ? "S" : "C"}
+        {theme === "dark" ? (
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2" />
+            <path d="M12 20v2" />
+            <path d="m4.93 4.93 1.41 1.41" />
+            <path d="m17.66 17.66 1.41 1.41" />
+            <path d="M2 12h2" />
+            <path d="M20 12h2" />
+            <path d="m6.34 17.66-1.41 1.41" />
+            <path d="m19.07 4.93-1.41 1.41" />
+          </svg>
+        ) : (
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z" />
+          </svg>
+        )}
       </button>
     </div>
   );

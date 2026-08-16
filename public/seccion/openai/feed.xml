@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>LaDiarIA</title>
-    <link>https://example.com/LaDiarIA</link>
-    <description>Diario digital generado con agentes de IA y validado por humanos.</description>
+    <title>LaDiarIA — OpenAI</title>
+    <link>https://example.com/LaDiarIA/seccion/openai</link>
+    <description>Modelos GPT, o-series, Sora y productos de OpenAI</description>
     <language>es-AR</language>
     <lastBuildDate>Sat, 15 Aug 2026 23:54:20 GMT</lastBuildDate>
     <atom:link href="https://example.com/LaDiarIA/feed.xml" rel="self" type="application/rss+xml"/>

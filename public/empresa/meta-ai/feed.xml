@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>LaDiarIA — Portada</title>
-    <link>https://example.com/LaDiarIA/seccion/portada</link>
-    <description>Lo destacado del dia en inteligencia artificial</description>
+    <title>LaDiarIA — Meta AI</title>
+    <link>https://example.com/LaDiarIA/empresa/meta-ai</link>
+    <description>Llama y la investigacion de Meta AI</description>
     <language>es-AR</language>
     <lastBuildDate>Sat, 15 Aug 2026 23:54:20 GMT</lastBuildDate>
     <atom:link href="https://example.com/LaDiarIA/feed.xml" rel="self" type="application/rss+xml"/>
