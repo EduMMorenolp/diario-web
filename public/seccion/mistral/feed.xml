@@ -5,8 +5,15 @@
     <link>https://example.com/LaDiarIA/seccion/mistral</link>
     <description>Modelos de Mistral, Codestral y europeos</description>
     <language>es-AR</language>
-    <lastBuildDate>Sat, 15 Aug 2026 23:54:20 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 16 Aug 2026 00:34:56 GMT</lastBuildDate>
     <atom:link href="https://example.com/LaDiarIA/feed.xml" rel="self" type="application/rss+xml"/>
-
+    <item>
+      <title>Mistral apuesta por el código y la soberanía europea con Codestral</title>
+      <link>https://example.com/LaDiarIA/nota/mistral-codestral-europa</link>
+      <guid isPermaLink="false">https://example.com/LaDiarIA/nota/mistral-codestral-europa</guid>
+      <pubDate>Sat, 15 Aug 2026 18:00:00 GMT</pubDate>
+      <author>LaDiarIA</author>
+      <description>La francesa dobla su apuesta por modelos de código y por una oferta cloud que responda a los requisitos de soberanía de datos europeos.</description>
+    </item>
   </channel>
 </rss>

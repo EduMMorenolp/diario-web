@@ -76,7 +76,7 @@ export function Home() {
       </header>
 
       {featured && (
-        <section className="home-hero" aria-label="Nota de portada">
+        <section className="home-hero reveal" aria-label="Nota de portada">
           <ArticleCard nota={featured} lead />
         </section>
       )}
@@ -84,7 +84,7 @@ export function Home() {
       {rest.length > 0 && (
         <section className="home-sections" aria-label="Notas de la edición por sección">
           {groups.map((g) => (
-            <section key={g.key} className="home-section-group">
+            <section key={g.key} className="home-section-group reveal">
               <h2 className="section-block-title">{g.name}</h2>
               <div className="home-grid">
                 {g.notes.map((n) => (

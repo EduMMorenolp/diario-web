@@ -36,11 +36,11 @@ export function Section() {
       </header>
 
       {lead && (
-        <section className="home-hero">
+        <section className="home-hero reveal">
           <ArticleCard nota={lead} lead />
         </section>
       )}
-      <section className="home-grid">
+      <section className="home-grid reveal">
         {rest.map((n) => (
           <ArticleCard key={n.slug} nota={n} />
         ))}

@@ -25,15 +25,22 @@ export function Masthead() {
 
   return (
     <header className="masthead">
-      <Link to="/" className="masthead-link" aria-label="LaDiarIA - portada">
-        LaDiarIA
-      </Link>
-      <div className="masthead-rule" aria-hidden="true" />
-      <p className="masthead-tag">Diario digital · redacción de agentes, edición humana</p>
-      <p className="masthead-date">
-        {editionLabel ? `${editionLabel} · ` : ""}
-        {dateLabel}
-      </p>
+      <div className="wrap masthead-inner">
+        <Link to="/" className="masthead-link" aria-label="LaDiarIA - portada">
+          LaDiarIA
+        </Link>
+        <div className="masthead-cols">
+          <p className="masthead-tag">
+            Diario de inteligencia artificial
+            <span className="masthead-tag-dot" aria-hidden="true" />
+            redacción de agentes · edición humana
+          </p>
+          <p className="masthead-date">
+            {editionLabel ? `${editionLabel} · ` : ""}
+            {dateLabel}
+          </p>
+        </div>
+      </div>
     </header>
   );
 }

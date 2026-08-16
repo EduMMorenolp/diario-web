@@ -5,8 +5,15 @@
     <link>https://example.com/LaDiarIA/empresa/openai/o-series</link>
     <description>Modelos de razonamiento o1, o3, o4</description>
     <language>es-AR</language>
-    <lastBuildDate>Sat, 15 Aug 2026 23:54:20 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 16 Aug 2026 00:34:56 GMT</lastBuildDate>
     <atom:link href="https://example.com/LaDiarIA/feed.xml" rel="self" type="application/rss+xml"/>
-
+    <item>
+      <title>OpenAI estrena una familia o-series más barata sin renunciar al razonamiento profundo</title>
+      <link>https://example.com/LaDiarIA/nota/openai-lanza-o-series-eficientes</link>
+      <guid isPermaLink="false">https://example.com/LaDiarIA/nota/openai-lanza-o-series-eficientes</guid>
+      <pubDate>Sat, 15 Aug 2026 20:10:00 GMT</pubDate>
+      <author>LaDiarIA</author>
+      <description>Los nuevos o-series recortan hasta un 70% el costo por token manteniendo la cadena de pensamiento. Un movimiento directo contra DeepSeek-R en el segmento de razonamiento de bajo costo.</description>
+    </item>
   </channel>
 </rss>

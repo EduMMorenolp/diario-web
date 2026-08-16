@@ -5,15 +5,63 @@
     <link>https://example.com/LaDiarIA</link>
     <description>Diario digital generado con agentes de IA y validado por humanos.</description>
     <language>es-AR</language>
-    <lastBuildDate>Sat, 15 Aug 2026 23:54:20 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 16 Aug 2026 00:34:56 GMT</lastBuildDate>
     <atom:link href="https://example.com/LaDiarIA/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>Bienvenido a LaDiarIA</title>
-      <link>https://example.com/LaDiarIA/nota/bienvenida-diario-de-ia</link>
-      <guid isPermaLink="false">https://example.com/LaDiarIA/nota/bienvenida-diario-de-ia</guid>
-      <pubDate>Sat, 15 Aug 2026 22:31:56 GMT</pubDate>
+      <title>OpenAI estrena una familia o-series más barata sin renunciar al razonamiento profundo</title>
+      <link>https://example.com/LaDiarIA/nota/openai-lanza-o-series-eficientes</link>
+      <guid isPermaLink="false">https://example.com/LaDiarIA/nota/openai-lanza-o-series-eficientes</guid>
+      <pubDate>Sat, 15 Aug 2026 20:10:00 GMT</pubDate>
       <author>LaDiarIA</author>
-      <description>Nota de ejemplo del nuevo diario de inteligencia artificial.</description>
+      <description>Los nuevos o-series recortan hasta un 70% el costo por token manteniendo la cadena de pensamiento. Un movimiento directo contra DeepSeek-R en el segmento de razonamiento de bajo costo.</description>
+    </item>
+    <item>
+      <title>Gemini recorta los precios de generación multimodal y empuja la adopción empresarial</title>
+      <link>https://example.com/LaDiarIA/nota/gemini-abarata-multimodal</link>
+      <guid isPermaLink="false">https://example.com/LaDiarIA/nota/gemini-abarata-multimodal</guid>
+      <pubDate>Sat, 15 Aug 2026 19:40:00 GMT</pubDate>
+      <author>LaDiarIA</author>
+      <description>Google DeepMind baja las tarifas de entrada y salida de su API multimodal para competir en el segmento de aplicaciones con contexto enriquecido.</description>
+    </item>
+    <item>
+      <title>Claude se consolida como la apuesta corporativa para agentes de código y despliegues regulados</title>
+      <link>https://example.com/LaDiarIA/nota/claude-se-consolida-corporativo</link>
+      <guid isPermaLink="false">https://example.com/LaDiarIA/nota/claude-se-consolida-corporativo</guid>
+      <pubDate>Sat, 15 Aug 2026 19:05:00 GMT</pubDate>
+      <author>LaDiarIA</author>
+      <description>Adopción creciente en empresas reguladas y equipos de ingeniería. Anthropic refuerza su capa de seguridad y gobernanza para agentes autónomos.</description>
+    </item>
+    <item>
+      <title>Llama 4 gana terreno en la ejecución local: el despliegue en el borde se vuelve mainstream</title>
+      <link>https://example.com/LaDiarIA/nota/meta-llama-4-ejecucion-local</link>
+      <guid isPermaLink="false">https://example.com/LaDiarIA/nota/meta-llama-4-ejecucion-local</guid>
+      <pubDate>Sat, 15 Aug 2026 18:30:00 GMT</pubDate>
+      <author>LaDiarIA</author>
+      <description>El interés por inferencia local y privada crece. Llama se convierte en la puerta de entrada para equipos que quieren modelos abiertos fuera de la nube.</description>
+    </item>
+    <item>
+      <title>Mistral apuesta por el código y la soberanía europea con Codestral</title>
+      <link>https://example.com/LaDiarIA/nota/mistral-codestral-europa</link>
+      <guid isPermaLink="false">https://example.com/LaDiarIA/nota/mistral-codestral-europa</guid>
+      <pubDate>Sat, 15 Aug 2026 18:00:00 GMT</pubDate>
+      <author>LaDiarIA</author>
+      <description>La francesa dobla su apuesta por modelos de código y por una oferta cloud que responda a los requisitos de soberanía de datos europeos.</description>
+    </item>
+    <item>
+      <title>Grok suma memoria de contexto persistente y redefine el streaming de IA conversacional</title>
+      <link>https://example.com/LaDiarIA/nota/grok-memoria-contexto</link>
+      <guid isPermaLink="false">https://example.com/LaDiarIA/nota/grok-memoria-contexto</guid>
+      <pubDate>Sat, 15 Aug 2026 17:20:00 GMT</pubDate>
+      <author>LaDiarIA</author>
+      <description>La nueva memoria contextual de Grok permite sesiones más largas y coherentes, apuntando al uso conversacional en tiempo real.</description>
+    </item>
+    <item>
+      <title>DeepSeek-R vuelve a demostrar que el razonamiento abierto puede competir al costo mínimo</title>
+      <link>https://example.com/LaDiarIA/nota/deepseek-r-rendimiento-abierto</link>
+      <guid isPermaLink="false">https://example.com/LaDiarIA/nota/deepseek-r-rendimiento-abierto</guid>
+      <pubDate>Sat, 15 Aug 2026 16:40:00 GMT</pubDate>
+      <author>LaDiarIA</author>
+      <description>Nuevas mediciones independientes ubican a DeepSeek-R a la par de modelos propietarios de razonamiento en tareas técnicas, a una fracción del costo.</description>
     </item>
   </channel>
 </rss>

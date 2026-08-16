@@ -167,13 +167,31 @@ p {
   border-radius: var(--radius);
 }
 .markdown blockquote {
-  margin: var(--space-5) 0;
-  padding: var(--space-4) var(--space-5);
-  background: var(--color-paper-2);
-  border-radius: var(--radius);
+  margin: var(--space-6) 0;
+  padding: var(--space-6) 0 var(--space-4);
+  background: transparent;
+  border-radius: 0;
   color: var(--color-ink-2);
   font-style: italic;
-  border: 1px solid var(--color-line);
+  font-family: var(--font-body);
+  font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+  line-height: 1.4;
+  border: none;
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Drop cap editorial en el primer párrafo del cuerpo */
+.markdown > p:first-of-type::first-letter {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 3.4em;
+  line-height: 0.8;
+  float: left;
+  margin: 0.06em 0.14em 0 0;
+  color: var(--color-ink);
 }
 .markdown hr {
   border: 0;

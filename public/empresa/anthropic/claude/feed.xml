@@ -5,8 +5,15 @@
     <link>https://example.com/LaDiarIA/empresa/anthropic/claude</link>
     <description>Modelos Claude 3.x y Claude 4</description>
     <language>es-AR</language>
-    <lastBuildDate>Sat, 15 Aug 2026 23:54:20 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 16 Aug 2026 00:34:56 GMT</lastBuildDate>
     <atom:link href="https://example.com/LaDiarIA/feed.xml" rel="self" type="application/rss+xml"/>
-
+    <item>
+      <title>Claude se consolida como la apuesta corporativa para agentes de código y despliegues regulados</title>
+      <link>https://example.com/LaDiarIA/nota/claude-se-consolida-corporativo</link>
+      <guid isPermaLink="false">https://example.com/LaDiarIA/nota/claude-se-consolida-corporativo</guid>
+      <pubDate>Sat, 15 Aug 2026 19:05:00 GMT</pubDate>
+      <author>LaDiarIA</author>
+      <description>Adopción creciente en empresas reguladas y equipos de ingeniería. Anthropic refuerza su capa de seguridad y gobernanza para agentes autónomos.</description>
+    </item>
   </channel>
 </rss>

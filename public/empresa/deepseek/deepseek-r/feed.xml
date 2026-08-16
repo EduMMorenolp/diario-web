@@ -5,8 +5,15 @@
     <link>https://example.com/LaDiarIA/empresa/deepseek/deepseek-r</link>
     <description>Modelos de razonamiento R1</description>
     <language>es-AR</language>
-    <lastBuildDate>Sat, 15 Aug 2026 23:54:20 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 16 Aug 2026 00:34:56 GMT</lastBuildDate>
     <atom:link href="https://example.com/LaDiarIA/feed.xml" rel="self" type="application/rss+xml"/>
-
+    <item>
+      <title>DeepSeek-R vuelve a demostrar que el razonamiento abierto puede competir al costo mínimo</title>
+      <link>https://example.com/LaDiarIA/nota/deepseek-r-rendimiento-abierto</link>
+      <guid isPermaLink="false">https://example.com/LaDiarIA/nota/deepseek-r-rendimiento-abierto</guid>
+      <pubDate>Sat, 15 Aug 2026 16:40:00 GMT</pubDate>
+      <author>LaDiarIA</author>
+      <description>Nuevas mediciones independientes ubican a DeepSeek-R a la par de modelos propietarios de razonamiento en tareas técnicas, a una fracción del costo.</description>
+    </item>
   </channel>
 </rss>

@@ -47,7 +47,7 @@ export function Ediciones() {
       </header>
 
       <div className="archive-layout">
-        <nav className="archive-nav" aria-label="Ediciones anteriores">
+        <nav className="archive-nav reveal" aria-label="Ediciones anteriores">
           <ul className="archive-list">
             {editions.map((e) => (
               <li key={e.slug}>
