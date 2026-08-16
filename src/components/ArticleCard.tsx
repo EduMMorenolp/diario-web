@@ -56,7 +56,34 @@ export function Byline({ nota, compact = false }: { nota: DiarioNota; compact?: 
   );
 }
 
-export function ArticleCard({ nota, lead = false }: { nota: DiarioNota; lead?: boolean }) {
+export function ArticleCard({
+  nota,
+  lead = false,
+  compact = false,
+}: {
+  nota: DiarioNota;
+  lead?: boolean;
+  compact?: boolean;
+}) {
+  if (compact && !lead) {
+    return (
+      <article className="card card--compact">
+        <div className="card-inner card-inner--compact">
+          <Link to={`/nota/${nota.slug}`} className="card-cover">
+            <CoverImg nota={nota} />
+          </Link>
+          <div className="card-body">
+            <Kicker nota={nota} />
+            <Link to={`/nota/${nota.slug}`}>
+              <h3 className="card-title card-title--compact">{nota.title}</h3>
+            </Link>
+            <Byline nota={nota} compact />
+          </div>
+        </div>
+      </article>
+    );
+  }
+
   return (
     <article className={`card ${lead ? "card--lead" : ""}`}>
       {lead ? (

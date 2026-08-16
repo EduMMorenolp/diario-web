@@ -71,16 +71,6 @@
   ],
   "categories": [
     {
-      "id": 9,
-      "slug": "portada",
-      "name": "Portada",
-      "color": "#1c1c1e",
-      "position": 0,
-      "blurb": "Lo destacado del dia en inteligencia artificial",
-      "parentId": null,
-      "models": []
-    },
-    {
       "id": 19,
       "slug": "openai",
       "name": "OpenAI",

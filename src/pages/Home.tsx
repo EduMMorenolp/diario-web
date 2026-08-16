@@ -47,7 +47,9 @@ export function Home() {
     notes.find((n) => n.featured) ??
     notes[0];
   const rest = notes.filter((n) => n !== featured);
-  const groups = groupBySection(rest, categories);
+  const secondary = rest.slice(0, 3);
+  const groupedNotes = rest.filter((n) => !secondary.some((item) => item.slug === n.slug));
+  const groups = groupBySection(groupedNotes, categories);
 
   useMeta({
     title: edition ? `LaDiarIA — ${edition.label}` : "LaDiarIA — Diario digital con agentes de IA",
@@ -76,12 +78,25 @@ export function Home() {
       </header>
 
       {featured && (
-        <section className="home-hero reveal" aria-label="Nota de portada">
-          <ArticleCard nota={featured} lead />
+        <section className="home-featured-grid reveal" aria-label="Nota de portada y tendencias">
+          <div className="featured-story">
+            <ArticleCard nota={featured} lead />
+          </div>
+
+          {secondary.length > 0 && (
+            <aside className="featured-rail" aria-label="Notas destacadas secundarias">
+              <div className="featured-rail-header">
+                <span>Lo más reciente</span>
+              </div>
+              {secondary.map((n) => (
+                <ArticleCard key={n.slug} nota={n} compact />
+              ))}
+            </aside>
+          )}
         </section>
       )}
 
-      {rest.length > 0 && (
+      {groups.length > 0 && (
         <section className="home-sections" aria-label="Notas de la edición por sección">
           {groups.map((g) => (
             <section key={g.key} className="home-section-group reveal">
