@@ -2,6 +2,7 @@ import { type DiarioEdition, type DiarioNota, formatEditionDate } from "../api/n
 import { ArticleCard } from "../components/ArticleCard";
 import { useMeta } from "../hooks/useMeta";
 import { useNotas } from "../hooks/useNotas";
+import { useSite } from "../hooks/useSite";
 
 interface CategoryInfo {
   slug: string;
@@ -34,6 +35,7 @@ function groupBySection(notes: DiarioNota[], categories: CategoryInfo[]) {
 
 export function Home() {
   const { data } = useNotas();
+  const site = useSite();
   const edition: DiarioEdition | null = data?.edition ?? null;
   const allNotes = data?.notes ?? [];
   const categories = data?.categories ?? [];
@@ -52,9 +54,10 @@ export function Home() {
   const groups = groupBySection(groupedNotes, categories);
 
   useMeta({
-    title: edition ? `LaDiarIA — ${edition.label}` : "LaDiarIA — Diario digital con agentes de IA",
-    description:
-      edition?.briefing ?? "Noticias generadas con agentes de IA y validadas por humanos.",
+    title: edition
+      ? `${site.siteName} — ${edition.label}`
+      : `${site.siteName} — Diario digital con agentes de IA`,
+    description: edition?.briefing ?? site.descriptionSeo,
   });
 
   if (notes.length === 0) {

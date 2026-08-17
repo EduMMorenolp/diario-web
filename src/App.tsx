@@ -1,7 +1,9 @@
+import { useEffect } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { Masthead } from "./components/Masthead";
 import { SectionNav } from "./components/SectionNav";
 import { useNotas } from "./hooks/useNotas";
+import { useSite } from "./hooks/useSite";
 import { useUi } from "./hooks/useUi";
 import { Company } from "./pages/Company";
 import { Ediciones } from "./pages/Ediciones";
@@ -91,13 +93,31 @@ function Toolbar() {
   );
 }
 
+function SiteTheme() {
+  const site = useSite();
+  useEffect(() => {
+    const root = document.documentElement;
+    root.style.setProperty("--color-accent", site.accentColor);
+    root.style.setProperty("--color-paper", site.darkBg);
+    root.style.setProperty("--color-inverse", site.darkBg);
+    root.style.setProperty("--color-paper-light", site.lightBg);
+    if (site.faviconUrl) {
+      const link = document.head.querySelector<HTMLLinkElement>('link[rel="icon"]');
+      if (link) link.href = site.faviconUrl;
+    }
+  }, [site]);
+  return null;
+}
+
 export default function App() {
   useUi();
   const { data } = useNotas();
+  const site = useSite();
   const categories = data?.categories ?? [];
 
   return (
     <>
+      <SiteTheme />
       <Masthead />
       <SectionNav categories={categories} />
       <Toolbar />
@@ -113,11 +133,8 @@ export default function App() {
         </Routes>
       </main>
       <footer className="site-footer">
-        <span className="footer-word">LaDiarIA</span>
-        <p>
-          Diario generado con agentes de IA (redactor, editor y jefe de redacción) y validado por
-          humanos. Contenido bajo revisión editorial.
-        </p>
+        <span className="footer-word">{site.siteName || "LaDiarIA"}</span>
+        <p>{site.footerText}</p>
       </footer>
     </>
   );

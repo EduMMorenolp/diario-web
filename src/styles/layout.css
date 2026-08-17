@@ -43,6 +43,11 @@
   vertical-align: super;
   box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-accent) 22%, transparent);
 }
+.masthead-logo {
+  max-height: 5rem;
+  width: auto;
+  display: inline-block;
+}
 .masthead-cols {
   display: flex;
   flex-direction: column;
