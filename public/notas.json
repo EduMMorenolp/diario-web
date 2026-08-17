@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-08-16T04:35:15.373Z",
-  "updatedAt": "2026-08-16T04:35:15.373Z",
+  "generatedAt": "2026-08-17T20:14:00.484Z",
+  "updatedAt": "2026-08-17T20:14:00.484Z",
   "noteCount": 1,
   "edition": {
-    "slug": "2026-08-16-noche-2",
-    "label": "Edición noche",
-    "date": "2026-08-16",
-    "slot": "noche",
-    "publishedAt": "2026-08-16T04:35:15.000Z",
+    "slug": "2026-08-17-tarde",
+    "label": "Edición tarde",
+    "date": "2026-08-17",
+    "slot": "tarde",
+    "publishedAt": "2026-08-17T20:14:00.000Z",
     "briefing": "asdqwd",
     "featuredNoteSlug": null
   },
@@ -55,24 +55,31 @@
       "noteCount": 0
     },
     {
-      "slug": "2026-08-16-manana",
+      "slug": "2026-08-19-manana",
       "label": "Edición mañana",
-      "date": "2026-08-16",
+      "date": "2026-08-19",
       "slot": "manana",
       "noteCount": 0
     },
     {
-      "slug": "2026-08-16-noche",
-      "label": "Edición noche",
-      "date": "2026-08-16",
-      "slot": "noche",
+      "slug": "2026-08-18-manana",
+      "label": "Edición mañana",
+      "date": "2026-08-18",
+      "slot": "manana",
       "noteCount": 0
     },
     {
-      "slug": "2026-08-16-noche-2",
-      "label": "Edición noche",
-      "date": "2026-08-16",
-      "slot": "noche",
+      "slug": "2026-08-17-manana",
+      "label": "Edición mañana",
+      "date": "2026-08-17",
+      "slot": "manana",
+      "noteCount": 0
+    },
+    {
+      "slug": "2026-08-17-tarde",
+      "label": "Edición tarde",
+      "date": "2026-08-17",
+      "slot": "tarde",
       "noteCount": 0
     }
   ],
