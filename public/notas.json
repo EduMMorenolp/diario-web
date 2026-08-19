@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-08-17T20:15:15.979Z",
-  "updatedAt": "2026-08-17T20:15:15.980Z",
+  "generatedAt": "2026-08-19T01:29:17.651Z",
+  "updatedAt": "2026-08-19T01:29:17.651Z",
   "noteCount": 1,
   "edition": {
-    "slug": "2026-08-17-manana",
+    "slug": "2026-08-18-manana",
     "label": "Edición mañana",
-    "date": "2026-08-17",
+    "date": "2026-08-18",
     "slot": "manana",
-    "publishedAt": "2026-08-17T20:15:16.000Z",
+    "publishedAt": "2026-08-19T01:29:18.000Z",
     "briefing": null,
     "featuredNoteSlug": null
   },
@@ -85,6 +85,16 @@
   ],
   "categories": [
     {
+      "id": 39,
+      "slug": "portada",
+      "name": "Portada",
+      "color": "#1c1c1e",
+      "position": 0,
+      "blurb": "Lo destacado del dia en inteligencia artificial",
+      "parentId": null,
+      "models": []
+    },
+    {
       "id": 19,
       "slug": "openai",
       "name": "OpenAI",
@@ -94,7 +104,7 @@
       "parentId": null,
       "models": [
         {
-          "id": 20,
+          "id": 40,
           "slug": "gpt",
           "name": "GPT",
           "color": "#10a37f",
@@ -104,7 +114,7 @@
           "models": []
         },
         {
-          "id": 21,
+          "id": 41,
           "slug": "o-series",
           "name": "o-series",
           "color": "#10a37f",
@@ -114,7 +124,7 @@
           "models": []
         },
         {
-          "id": 22,
+          "id": 42,
           "slug": "sora",
           "name": "Sora",
           "color": "#10a37f",
@@ -135,7 +145,7 @@
       "parentId": null,
       "models": [
         {
-          "id": 24,
+          "id": 43,
           "slug": "gemini",
           "name": "Gemini",
           "color": "#4285f4",
@@ -145,7 +155,7 @@
           "models": []
         },
         {
-          "id": 25,
+          "id": 44,
           "slug": "gemma",
           "name": "Gemma",
           "color": "#4285f4",
@@ -166,7 +176,7 @@
       "parentId": null,
       "models": [
         {
-          "id": 27,
+          "id": 45,
           "slug": "claude",
           "name": "Claude",
           "color": "#d4a574",
@@ -176,7 +186,7 @@
           "models": []
         },
         {
-          "id": 28,
+          "id": 46,
           "slug": "claude-app",
           "name": "Claude App",
           "color": "#d4a574",
@@ -197,7 +207,7 @@
       "parentId": null,
       "models": [
         {
-          "id": 30,
+          "id": 47,
           "slug": "llama",
           "name": "Llama",
           "color": "#0668e1",
@@ -218,7 +228,7 @@
       "parentId": null,
       "models": [
         {
-          "id": 33,
+          "id": 49,
           "slug": "codestral",
           "name": "Codestral",
           "color": "#f7a842",
@@ -228,7 +238,7 @@
           "models": []
         },
         {
-          "id": 32,
+          "id": 48,
           "slug": "mistral-large",
           "name": "Mistral Large",
           "color": "#f7a842",
@@ -249,7 +259,7 @@
       "parentId": null,
       "models": [
         {
-          "id": 35,
+          "id": 50,
           "slug": "grok",
           "name": "Grok",
           "color": "#1d9bf0",
@@ -270,7 +280,7 @@
       "parentId": null,
       "models": [
         {
-          "id": 38,
+          "id": 52,
           "slug": "deepseek-r",
           "name": "DeepSeek-R",
           "color": "#4d6bfe",
@@ -280,7 +290,7 @@
           "models": []
         },
         {
-          "id": 37,
+          "id": 51,
           "slug": "deepseek-v",
           "name": "DeepSeek-V",
           "color": "#4d6bfe",
