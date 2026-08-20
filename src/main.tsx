@@ -8,7 +8,7 @@ import "./styles/layout.css";
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter
-      basename="/LaDiarIA/"
+      basename="/diario-web/"
       future={{ v7_startTransition: true, v7_relativeSplatPath: true }}
     >
       <App />

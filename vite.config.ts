@@ -3,6 +3,6 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/LaDiarIA/",
+  base: "/diario-web/",
   server: { port: 5173, host: true },
 });
