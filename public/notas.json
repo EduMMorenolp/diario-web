@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-27T01:16:16.940Z",
-  "updatedAt": "2026-08-27T01:16:16.940Z",
+  "generatedAt": "2026-08-27T21:00:00.477Z",
+  "updatedAt": "2026-08-27T21:00:00.477Z",
   "noteCount": 1,
   "edition": {
     "slug": "2026-08-25-manana",
@@ -13,73 +13,73 @@
   },
   "editions": [
     {
-      "slug": "2026-08-25-manana",
+      "slug": "2026-09-02-manana",
       "label": "Edición mañana",
-      "date": "2026-08-25",
+      "date": "2026-09-02",
       "slot": "manana",
       "noteCount": 0
     },
     {
-      "slug": "2026-08-24-manana",
+      "slug": "2026-09-01-manana",
       "label": "Edición mañana",
-      "date": "2026-08-24",
+      "date": "2026-09-01",
       "slot": "manana",
       "noteCount": 0
     },
     {
-      "slug": "2026-08-24-tarde",
+      "slug": "2026-08-31-manana",
+      "label": "Edición mañana",
+      "date": "2026-08-31",
+      "slot": "manana",
+      "noteCount": 0
+    },
+    {
+      "slug": "2026-08-31-tarde",
       "label": "Edición tarde",
-      "date": "2026-08-24",
+      "date": "2026-08-31",
       "slot": "tarde",
       "noteCount": 0
     },
     {
-      "slug": "2026-08-23-manana",
+      "slug": "2026-08-30-manana",
       "label": "Edición mañana",
-      "date": "2026-08-23",
+      "date": "2026-08-30",
       "slot": "manana",
       "noteCount": 0
     },
     {
-      "slug": "2026-08-23-tarde",
+      "slug": "2026-08-30-tarde",
       "label": "Edición tarde",
-      "date": "2026-08-23",
+      "date": "2026-08-30",
       "slot": "tarde",
       "noteCount": 0
     },
     {
-      "slug": "2026-08-23-noche",
+      "slug": "2026-08-30-noche",
       "label": "Edición noche",
-      "date": "2026-08-23",
+      "date": "2026-08-30",
       "slot": "noche",
       "noteCount": 0
     },
     {
-      "slug": "2026-08-22-manana",
+      "slug": "2026-08-29-manana",
       "label": "Edición mañana",
-      "date": "2026-08-22",
+      "date": "2026-08-29",
       "slot": "manana",
       "noteCount": 0
     },
     {
-      "slug": "2026-08-22-tarde",
+      "slug": "2026-08-29-tarde",
       "label": "Edición tarde",
-      "date": "2026-08-22",
+      "date": "2026-08-29",
       "slot": "tarde",
       "noteCount": 0
     },
     {
-      "slug": "2026-08-21-manana",
+      "slug": "2026-08-28-manana",
       "label": "Edición mañana",
-      "date": "2026-08-21",
+      "date": "2026-08-28",
       "slot": "manana",
-      "noteCount": 0
-    },
-    {
-      "slug": "2026-08-21-tarde",
-      "label": "Edición tarde",
-      "date": "2026-08-21",
-      "slot": "tarde",
       "noteCount": 0
     }
   ],
