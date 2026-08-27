@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-27T01:14:00.352Z",
-  "updatedAt": "2026-08-27T01:14:00.352Z",
+  "generatedAt": "2026-08-27T01:15:16.042Z",
+  "updatedAt": "2026-08-27T01:15:16.042Z",
   "noteCount": 1,
   "edition": {
-    "slug": "2026-08-24-tarde",
-    "label": "Edición tarde",
+    "slug": "2026-08-24-manana",
+    "label": "Edición mañana",
     "date": "2026-08-24",
-    "slot": "tarde",
-    "publishedAt": "2026-08-27T01:14:00.000Z",
-    "briefing": "asdqwd",
+    "slot": "manana",
+    "publishedAt": "2026-08-27T01:15:16.000Z",
+    "briefing": null,
     "featuredNoteSlug": null
   },
   "editions": [
