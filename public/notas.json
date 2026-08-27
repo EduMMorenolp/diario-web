@@ -1,12 +1,91 @@
 {
-  "generatedAt": "2026-08-20T00:33:25.156Z",
-  "updatedAt": "2026-08-20T00:33:25.156Z",
+  "generatedAt": "2026-08-27T01:03:20.500Z",
+  "updatedAt": "2026-08-27T01:03:20.500Z",
   "noteCount": 1,
-  "edition": null,
-  "editions": [],
+  "edition": {
+    "slug": "2026-08-19-manana",
+    "label": "Edición mañana",
+    "date": "2026-08-19",
+    "slot": "manana",
+    "publishedAt": "2026-08-27T01:03:20.000Z",
+    "briefing": null,
+    "featuredNoteSlug": null
+  },
+  "editions": [
+    {
+      "slug": "2026-08-25-manana",
+      "label": "Edición mañana",
+      "date": "2026-08-25",
+      "slot": "manana",
+      "noteCount": 0
+    },
+    {
+      "slug": "2026-08-24-manana",
+      "label": "Edición mañana",
+      "date": "2026-08-24",
+      "slot": "manana",
+      "noteCount": 0
+    },
+    {
+      "slug": "2026-08-24-tarde",
+      "label": "Edición tarde",
+      "date": "2026-08-24",
+      "slot": "tarde",
+      "noteCount": 0
+    },
+    {
+      "slug": "2026-08-23-manana",
+      "label": "Edición mañana",
+      "date": "2026-08-23",
+      "slot": "manana",
+      "noteCount": 0
+    },
+    {
+      "slug": "2026-08-23-tarde",
+      "label": "Edición tarde",
+      "date": "2026-08-23",
+      "slot": "tarde",
+      "noteCount": 0
+    },
+    {
+      "slug": "2026-08-23-noche",
+      "label": "Edición noche",
+      "date": "2026-08-23",
+      "slot": "noche",
+      "noteCount": 0
+    },
+    {
+      "slug": "2026-08-22-manana",
+      "label": "Edición mañana",
+      "date": "2026-08-22",
+      "slot": "manana",
+      "noteCount": 0
+    },
+    {
+      "slug": "2026-08-22-tarde",
+      "label": "Edición tarde",
+      "date": "2026-08-22",
+      "slot": "tarde",
+      "noteCount": 0
+    },
+    {
+      "slug": "2026-08-21-manana",
+      "label": "Edición mañana",
+      "date": "2026-08-21",
+      "slot": "manana",
+      "noteCount": 0
+    },
+    {
+      "slug": "2026-08-21-tarde",
+      "label": "Edición tarde",
+      "date": "2026-08-21",
+      "slot": "tarde",
+      "noteCount": 0
+    }
+  ],
   "categories": [
     {
-      "id": 1,
+      "id": 39,
       "slug": "portada",
       "name": "Portada",
       "color": "#1c1c1e",
@@ -16,7 +95,7 @@
       "models": []
     },
     {
-      "id": 2,
+      "id": 19,
       "slug": "openai",
       "name": "OpenAI",
       "color": "#10a37f",
@@ -25,39 +104,39 @@
       "parentId": null,
       "models": [
         {
-          "id": 3,
+          "id": 40,
           "slug": "gpt",
           "name": "GPT",
           "color": "#10a37f",
           "position": 0,
           "blurb": "GPT-4o, GPT-5 y la familia GPT",
-          "parentId": 2,
+          "parentId": 19,
           "models": []
         },
         {
-          "id": 4,
+          "id": 41,
           "slug": "o-series",
           "name": "o-series",
           "color": "#10a37f",
           "position": 0,
           "blurb": "Modelos de razonamiento o1, o3, o4",
-          "parentId": 2,
+          "parentId": 19,
           "models": []
         },
         {
-          "id": 5,
+          "id": 42,
           "slug": "sora",
           "name": "Sora",
           "color": "#10a37f",
           "position": 0,
           "blurb": "Generacion de video con IA",
-          "parentId": 2,
+          "parentId": 19,
           "models": []
         }
       ]
     },
     {
-      "id": 6,
+      "id": 23,
       "slug": "google-deepmind",
       "name": "Google DeepMind",
       "color": "#4285f4",
@@ -66,29 +145,29 @@
       "parentId": null,
       "models": [
         {
-          "id": 7,
+          "id": 43,
           "slug": "gemini",
           "name": "Gemini",
           "color": "#4285f4",
           "position": 0,
           "blurb": "Modelos Gemini 2.x y 3.x",
-          "parentId": 6,
+          "parentId": 23,
           "models": []
         },
         {
-          "id": 8,
+          "id": 44,
           "slug": "gemma",
           "name": "Gemma",
           "color": "#4285f4",
           "position": 0,
           "blurb": "Modelos abiertos Gemma",
-          "parentId": 6,
+          "parentId": 23,
           "models": []
         }
       ]
     },
     {
-      "id": 9,
+      "id": 26,
       "slug": "anthropic",
       "name": "Anthropic",
       "color": "#d4a574",
@@ -97,29 +176,29 @@
       "parentId": null,
       "models": [
         {
-          "id": 10,
+          "id": 45,
           "slug": "claude",
           "name": "Claude",
           "color": "#d4a574",
           "position": 0,
           "blurb": "Modelos Claude 3.x y Claude 4",
-          "parentId": 9,
+          "parentId": 26,
           "models": []
         },
         {
-          "id": 11,
+          "id": 46,
           "slug": "claude-app",
           "name": "Claude App",
           "color": "#d4a574",
           "position": 0,
           "blurb": "Productos Claude (Code, Artifacts)",
-          "parentId": 9,
+          "parentId": 26,
           "models": []
         }
       ]
     },
     {
-      "id": 12,
+      "id": 29,
       "slug": "meta-ai",
       "name": "Meta AI",
       "color": "#0668e1",
@@ -128,19 +207,19 @@
       "parentId": null,
       "models": [
         {
-          "id": 13,
+          "id": 47,
           "slug": "llama",
           "name": "Llama",
           "color": "#0668e1",
           "position": 0,
           "blurb": "Modelos abiertos Llama 3 y Llama 4",
-          "parentId": 12,
+          "parentId": 29,
           "models": []
         }
       ]
     },
     {
-      "id": 14,
+      "id": 31,
       "slug": "mistral",
       "name": "Mistral AI",
       "color": "#f7a842",
@@ -149,29 +228,29 @@
       "parentId": null,
       "models": [
         {
-          "id": 16,
+          "id": 49,
           "slug": "codestral",
           "name": "Codestral",
           "color": "#f7a842",
           "position": 0,
           "blurb": "Modelos para codigo",
-          "parentId": 14,
+          "parentId": 31,
           "models": []
         },
         {
-          "id": 15,
+          "id": 48,
           "slug": "mistral-large",
           "name": "Mistral Large",
           "color": "#f7a842",
           "position": 0,
           "blurb": "Modelos propietarios Large",
-          "parentId": 14,
+          "parentId": 31,
           "models": []
         }
       ]
     },
     {
-      "id": 17,
+      "id": 34,
       "slug": "xai",
       "name": "xAI",
       "color": "#1d9bf0",
@@ -180,19 +259,19 @@
       "parentId": null,
       "models": [
         {
-          "id": 18,
+          "id": 50,
           "slug": "grok",
           "name": "Grok",
           "color": "#1d9bf0",
           "position": 0,
           "blurb": "Modelos Grok",
-          "parentId": 17,
+          "parentId": 34,
           "models": []
         }
       ]
     },
     {
-      "id": 19,
+      "id": 36,
       "slug": "deepseek",
       "name": "DeepSeek",
       "color": "#4d6bfe",
@@ -201,23 +280,23 @@
       "parentId": null,
       "models": [
         {
-          "id": 21,
+          "id": 52,
           "slug": "deepseek-r",
           "name": "DeepSeek-R",
           "color": "#4d6bfe",
           "position": 0,
           "blurb": "Modelos de razonamiento R1",
-          "parentId": 19,
+          "parentId": 36,
           "models": []
         },
         {
-          "id": 20,
+          "id": 51,
           "slug": "deepseek-v",
           "name": "DeepSeek-V",
           "color": "#4d6bfe",
           "position": 0,
           "blurb": "Modelos de chat DeepSeek-V3 y V4",
-          "parentId": 19,
+          "parentId": 36,
           "models": []
         }
       ]
@@ -246,8 +325,8 @@
       "readingTime": 1,
       "imageUrl": null,
       "materialUrl": null,
-      "publishedAt": "2026-08-19T23:16:44.000Z",
-      "updatedAt": "2026-08-19T23:16:44.000Z"
+      "publishedAt": "2026-08-15T22:31:56.000Z",
+      "updatedAt": "2026-08-15T22:57:54.000Z"
     }
   ]
 }
