@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-08-27T01:04:19.195Z",
-  "updatedAt": "2026-08-27T01:04:19.195Z",
+  "generatedAt": "2026-08-27T01:05:16.315Z",
+  "updatedAt": "2026-08-27T01:05:16.315Z",
   "noteCount": 1,
   "edition": {
-    "slug": "2026-08-20-manana",
-    "label": "Edición mañana",
+    "slug": "2026-08-20-tarde",
+    "label": "Edición tarde",
     "date": "2026-08-20",
-    "slot": "manana",
-    "publishedAt": "2026-08-27T01:04:19.000Z",
+    "slot": "tarde",
+    "publishedAt": "2026-08-27T01:05:16.000Z",
     "briefing": null,
     "featuredNoteSlug": null
   },
