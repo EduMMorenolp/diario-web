@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-31T00:15:14.996Z",
-  "updatedAt": "2026-08-31T00:15:14.996Z",
+  "generatedAt": "2026-08-31T02:59:00.087Z",
+  "updatedAt": "2026-08-31T02:59:00.087Z",
   "noteCount": 2,
   "edition": {
-    "slug": "2026-08-30",
-    "label": "Edición 2026-08-30",
+    "slug": "2026-08-30-noche",
+    "label": "Edición Test",
     "date": "2026-08-30",
-    "slot": "diaria",
-    "publishedAt": "2026-08-30T15:30:01.000Z",
-    "briefing": null,
+    "slot": "noche",
+    "publishedAt": "2026-08-31T02:59:00.000Z",
+    "briefing": "",
     "featuredNoteSlug": null
   },
   "editions": [
@@ -17,6 +17,13 @@
       "label": "Edición 2026-08-30",
       "date": "2026-08-30",
       "slot": "diaria",
+      "noteCount": 0
+    },
+    {
+      "slug": "2026-08-30-noche",
+      "label": "Edición Test",
+      "date": "2026-08-30",
+      "slot": "noche",
       "noteCount": 0
     }
   ],
