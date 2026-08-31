@@ -5,5 +5,7 @@
   "descriptionSeo": "Diario digital de inteligencia artificial y desarrollo: noticias generadas con agentes de IA y validadas por humanos.",
   "accentColor": "#4f8fff",
   "darkBg": "#0e0e12",
-  "lightBg": "#ffffff"
+  "lightBg": "#ffffff",
+  "faviconUrl": "",
+  "logoUrl": ""
 }
