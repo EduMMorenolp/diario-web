@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-08-31T22:30:00.092Z",
-  "updatedAt": "2026-08-31T22:30:00.092Z",
+  "generatedAt": "2026-09-01T00:00:00.910Z",
+  "updatedAt": "2026-09-01T00:00:00.910Z",
   "noteCount": 2,
   "edition": {
     "slug": "2026-08-31-noche",
     "label": "Edición 2026-08-31",
     "date": "2026-08-31",
     "slot": "noche",
-    "publishedAt": "2026-08-31T22:30:00.000Z",
+    "publishedAt": "2026-09-01T00:00:01.000Z",
     "briefing": "",
     "featuredNoteSlug": null
   },
