@@ -6,21 +6,18 @@ let inflight: Promise<NotasPayload> | null = null;
 
 export function useNotas() {
   const [data, setData] = useState<NotasPayload | null>(cached);
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     if (inflight) {
-      inflight.then(setData).catch((e) => setError(String(e)));
+      inflight.then(setData);
       return;
     }
     inflight = fetchNotas();
-    inflight
-      .then((d) => {
-        cached = d;
-        setData(d);
-      })
-      .catch((e) => setError(String(e)));
+    inflight.then((d) => {
+      cached = d;
+      setData(d);
+    });
   }, []);
 
-  return { data, error };
+  return { data };
 }

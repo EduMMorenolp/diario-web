@@ -26,7 +26,7 @@ export const DEFAULT_SITE: SiteSettings = {
   faviconUrl: null,
 };
 
-export function normalizeSite(raw: Record<string, unknown> | undefined): SiteSettings {
+function normalizeSite(raw: Record<string, unknown> | undefined): SiteSettings {
   if (!raw) return DEFAULT_SITE;
   return {
     siteName: str(raw.siteName) ?? DEFAULT_SITE.siteName,

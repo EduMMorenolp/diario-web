@@ -1,7 +1,9 @@
+import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { ArticleCard } from "../components/ArticleCard";
 import { useMeta } from "../hooks/useMeta";
 import { useNotas } from "../hooks/useNotas";
+import { revealCards, revealKickers, revealLeadCard } from "../lib/animations";
 
 export function Company() {
   const { companySlug, modelSlug } = useParams();
@@ -27,6 +29,21 @@ export function Company() {
     title: `${title} — LaDiarIA`,
     description: model?.blurb ?? company?.blurb ?? "Sección del diario LaDiarIA.",
   });
+
+  // biome-ignore lint/correctness/useExhaustiveDependencies: animar al cambiar de nota/compania/modelo
+  useEffect(() => {
+    if (lead) {
+      revealLeadCard(".home-hero .card");
+    }
+    const grid = document.querySelector(".home-grid");
+    if (grid) {
+      const cards = grid.querySelectorAll(".card");
+      if (cards.length) {
+        revealCards(Array.from(cards));
+      }
+    }
+    requestAnimationFrame(() => revealKickers());
+  }, [lead?.slug, companySlug, modelSlug]);
 
   if (!company) {
     return (

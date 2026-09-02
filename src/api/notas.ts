@@ -77,7 +77,7 @@ const bool = (v: unknown): boolean => Boolean(v);
 const list = (v: unknown): string[] => (Array.isArray(v) ? v.map(String) : []);
 
 /** Convierte una nota cruda (del JSON) a `DiarioNota`, tolerando campos nuevos ausentes. */
-export function normalizeNota(n: Record<string, unknown>): DiarioNota {
+function normalizeNota(n: Record<string, unknown>): DiarioNota {
   return {
     slug: String(n.slug ?? ""),
     title: String(n.title ?? ""),
@@ -129,7 +129,7 @@ function normalizeCategory(c: Record<string, unknown>): DiarioCategory {
  * Normaliza el payload descargado a tipos fuertes y tolera un `notas.json` legacy
  * que aun no exporta `edition`/`editions`/`authorName`/`blurb` (entrega E10).
  */
-export function normalizeNotasPayload(raw: Record<string, unknown>): NotasPayload {
+function normalizeNotasPayload(raw: Record<string, unknown>): NotasPayload {
   const rawNotes = Array.isArray(raw.notes) ? raw.notes : [];
   const rawCats = Array.isArray(raw.categories) ? raw.categories : [];
   const rawEds = Array.isArray(raw.editions) ? raw.editions : [];
@@ -179,11 +179,6 @@ export function normalizeNotasPayload(raw: Record<string, unknown>): NotasPayloa
     edition,
     editions,
   };
-}
-
-export function readingTimeOf(body: string): number {
-  const words = body.trim().split(/\s+/).length;
-  return Math.max(1, Math.round(words / 220));
 }
 
 export function formatDate(iso: string | null): string {

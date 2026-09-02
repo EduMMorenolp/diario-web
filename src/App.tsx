@@ -3,8 +3,10 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import { Masthead } from "./components/Masthead";
 import { SectionNav } from "./components/SectionNav";
 import { useNotas } from "./hooks/useNotas";
+import { usePageTransition } from "./hooks/usePageTransition";
 import { useSite } from "./hooks/useSite";
 import { useUi } from "./hooks/useUi";
+import { animateFooter } from "./lib/animations";
 import { Company } from "./pages/Company";
 import { Ediciones } from "./pages/Ediciones";
 import { Home } from "./pages/Home";
@@ -109,8 +111,35 @@ function SiteTheme() {
   return null;
 }
 
+/** Animate footer when it enters the viewport */
+function FooterReveal() {
+  useEffect(() => {
+    const footer = document.querySelector(".site-footer");
+    if (!footer) return;
+
+    if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            animateFooter();
+            observer.unobserve(entry.target);
+          }
+        }
+      },
+      { threshold: 0.2 },
+    );
+
+    observer.observe(footer);
+    return () => observer.disconnect();
+  }, []);
+  return null;
+}
+
 export default function App() {
   useUi();
+  usePageTransition();
   const { data } = useNotas();
   const site = useSite();
   const categories = data?.categories ?? [];
@@ -132,10 +161,11 @@ export default function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
-      <footer className="site-footer">
+      <footer className="site-footer reveal">
         <span className="footer-word">{site.siteName || "LaDiarIA"}</span>
         <p>{site.footerText}</p>
       </footer>
+      <FooterReveal />
     </>
   );
 }

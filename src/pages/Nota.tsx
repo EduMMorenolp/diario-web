@@ -1,8 +1,10 @@
+import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { ArticleCard, Byline, CoverImg, Kicker } from "../components/ArticleCard";
 import { MarkdownContent } from "../components/Markdown";
 import { useMeta } from "../hooks/useMeta";
 import { useNotas } from "../hooks/useNotas";
+import { animateArticleEntry, revealCards, revealKickers } from "../lib/animations";
 
 export function Nota() {
   const { slug } = useParams();
@@ -16,6 +18,28 @@ export function Nota() {
     title: nota ? `${nota.title} — LaDiarIA` : "Nota no encontrada — LaDiarIA",
     description: nota?.summary ?? "Nota del diario LaDiarIA.",
   });
+
+  // Animate article entry
+  // biome-ignore lint/correctness/useExhaustiveDependencies: animate only on slug change, not full object
+  useEffect(() => {
+    if (nota) {
+      animateArticleEntry();
+      requestAnimationFrame(() => revealKickers());
+    }
+  }, [nota?.slug]);
+
+  // Animate related cards when they appear
+  useEffect(() => {
+    if (related.length > 0) {
+      const grid = document.querySelector(".related .home-grid");
+      if (grid) {
+        const cards = grid.querySelectorAll(".card");
+        if (cards.length) {
+          revealCards(Array.from(cards));
+        }
+      }
+    }
+  }, [related.length]);
 
   if (!nota) {
     return (

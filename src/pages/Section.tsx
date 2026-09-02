@@ -5,7 +5,7 @@ import { ArticleCard } from "../components/ArticleCard";
 import { useMeta } from "../hooks/useMeta";
 import { useNotas } from "../hooks/useNotas";
 import { useScrollReveal } from "../hooks/useScrollReveal";
-import { revealCards } from "../lib/animations";
+import { revealCards, revealKickers, revealLeadCard } from "../lib/animations";
 
 export function Section() {
   const { slug } = useParams();
@@ -23,6 +23,14 @@ export function Section() {
     title: section ? `${section.name} — LaDiarIA` : "Sección no encontrada — LaDiarIA",
     description: section?.blurb ?? "Sección del diario LaDiarIA.",
   });
+
+  // biome-ignore lint/correctness/useExhaustiveDependencies: animar al cambiar de lead
+  useEffect(() => {
+    if (lead) {
+      revealLeadCard(".home-hero .card");
+      requestAnimationFrame(() => revealKickers());
+    }
+  }, [lead?.slug]);
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: solo animar al montar
   useEffect(() => {

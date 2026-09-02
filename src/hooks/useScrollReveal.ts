@@ -1,16 +1,25 @@
 import { useEffect, useRef } from "react";
 import { revealSection } from "../lib/animations";
 
+type RevealFn = (el: HTMLElement) => void;
+
 /**
  * Hook que revela un elemento con animación cuando entra en el viewport.
  * Usa IntersectionObserver (cross-browser) en vez de animation-timeline (solo Chromium).
+ *
+ * @param threshold  — % de visibilidad requerido (default 0.12)
+ * @param animateFn — función de animación custom (default: revealSection de anime.js)
  */
 export function useScrollReveal<T extends HTMLElement = HTMLDivElement>(
   threshold = 0.12,
+  animateFn?: RevealFn,
 ) {
   const ref = useRef<T>(null);
   const thresholdRef = useRef(threshold);
   thresholdRef.current = threshold;
+
+  const animateFnRef = useRef(animateFn);
+  animateFnRef.current = animateFn;
 
   useEffect(() => {
     const el = ref.current;
@@ -23,7 +32,8 @@ export function useScrollReveal<T extends HTMLElement = HTMLDivElement>(
       (entries) => {
         for (const entry of entries) {
           if (entry.isIntersecting) {
-            revealSection(entry.target as HTMLElement);
+            const fn = animateFnRef.current ?? revealSection;
+            fn(entry.target as HTMLElement);
             observer.unobserve(entry.target);
           }
         }

@@ -5,7 +5,14 @@ import { useMeta } from "../hooks/useMeta";
 import { useNotas } from "../hooks/useNotas";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import { useSite } from "../hooks/useSite";
-import { animateEditionHead, revealCards } from "../lib/animations";
+import {
+  animateEditionHead,
+  animateSectionTitle,
+  revealCards,
+  revealCompactCards,
+  revealKickers,
+  revealLeadCard,
+} from "../lib/animations";
 
 interface CategoryInfo {
   slug: string;
@@ -66,12 +73,19 @@ export function Home() {
     description: edition?.briefing ?? site.descriptionSeo,
   });
 
-  // Animar cards del featured grid cuando cargan
+  // Animar cards del featured grid cuando cargan — differentiated per zone
   const featuredAnimated = useRef(false);
   useEffect(() => {
     if (notes.length > 0 && !featuredAnimated.current) {
       featuredAnimated.current = true;
-      revealCards(".featured-story .card, .featured-rail .card");
+      // Lead card gets the "emerge" effect
+      revealLeadCard(".featured-story .card");
+      // Sidebar compact cards get a slide-from-right stagger
+      revealCompactCards(".featured-rail .card");
+      // Reveal kickers in the featured section
+      requestAnimationFrame(() => {
+        revealKickers(document.querySelector<HTMLElement>(".home-featured-grid") ?? undefined);
+      });
     }
   }, [notes.length]);
 
@@ -97,9 +111,7 @@ export function Home() {
     <div className="wrap">
       <header className="edition-head">
         <p className="section-label">
-          {edition
-            ? `${edition.label} · ${formatEditionDate(edition.date)}`
-            : "LaDiarIA"}
+          {edition ? `${edition.label} · ${formatEditionDate(edition.date)}` : "LaDiarIA"}
         </p>
         {edition?.briefing ? <p className="edition-briefing">{edition.briefing}</p> : null}
       </header>
@@ -147,6 +159,11 @@ function SectionGroup({ group }: { group: { key: string; name: string; notes: Di
   useEffect(() => {
     const el = ref.current;
     if (!animated.current && el) {
+      // Animate the section title with its decorative line
+      const title = el.querySelector<HTMLElement>(".section-block-title");
+      if (title) animateSectionTitle(title);
+
+      // Stagger cards with alternating origins
       const grid = el.querySelector(".home-grid");
       if (grid) {
         const cards = grid.querySelectorAll(".card");
@@ -155,6 +172,9 @@ function SectionGroup({ group }: { group: { key: string; name: string; notes: Di
           revealCards(Array.from(cards));
         }
       }
+
+      // Reveal kickers after cards
+      requestAnimationFrame(() => revealKickers(el));
     }
   }, []);
 

@@ -4,7 +4,7 @@ import { ArticleCard } from "../components/ArticleCard";
 import { useMeta } from "../hooks/useMeta";
 import { useNotas } from "../hooks/useNotas";
 import { useScrollReveal } from "../hooks/useScrollReveal";
-import { revealCards } from "../lib/animations";
+import { revealCards, revealKickers } from "../lib/animations";
 
 const SLOT_LABEL: Record<string, string> = {
   manana: "mañana",
@@ -43,6 +43,7 @@ export function Ediciones() {
       if (cards.length) {
         animated.current = true;
         revealCards(Array.from(cards));
+        requestAnimationFrame(() => revealKickers(el));
       }
     }
   }, []);
