@@ -96,10 +96,9 @@ html[data-theme="light"] {
   --shadow-lg: 0 12px 32px rgb(0 0 0 / 0.1), 0 4px 8px rgb(0 0 0 / 0.04);
 }
 
-/* Reveal on scroll — anime.js se encarga de la animación via IntersectionObserver.
-   La clase .reveal solo marca el estado inicial oculto. */
+/* Reveal on scroll — visible por defecto para garantizar accesibilidad; anime.js anima [0, 1] */
 .reveal {
-  opacity: 0;
+  opacity: 1;
 }
 
 @media (prefers-reduced-motion: reduce) {
