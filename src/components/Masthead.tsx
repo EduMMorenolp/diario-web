@@ -1,6 +1,9 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { formatEditionDate } from "../api/notas";
 import { useNotas } from "../hooks/useNotas";
 import { useSite } from "../hooks/useSite";
+import { animateMasthead } from "../lib/animations";
 
 const WEEKDAYS = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"];
 const MONTHS = [
@@ -21,10 +24,14 @@ const MONTHS = [
 export function Masthead() {
   const { data } = useNotas();
   const site = useSite();
-  const editionLabel = data?.edition?.label;
+  const editionDate = data?.edition?.date;
   const now = new Date();
   const dateLabel = `${WEEKDAYS[now.getDay()]} ${now.getDate()} de ${MONTHS[now.getMonth()]} · ${now.getFullYear()}`;
   const siteName = site.siteName || "LaDiarIA";
+
+  useEffect(() => {
+    animateMasthead();
+  }, []);
 
   return (
     <header className="masthead">
@@ -39,7 +46,7 @@ export function Masthead() {
             redacción de agentes · edición humana
           </p>
           <p className="masthead-date">
-            {editionLabel ? `${editionLabel} · ` : ""}
+            {editionDate ? `Edición ${formatEditionDate(editionDate)} · ` : ""}
             {dateLabel}
           </p>
         </div>

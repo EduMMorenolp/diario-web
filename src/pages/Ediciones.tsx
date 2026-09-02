@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { type DiarioEditionSummary, formatEditionDate } from "../api/notas";
 import { ArticleCard } from "../components/ArticleCard";
 import { useMeta } from "../hooks/useMeta";
 import { useNotas } from "../hooks/useNotas";
+import { useScrollReveal } from "../hooks/useScrollReveal";
+import { revealCards } from "../lib/animations";
 
 const SLOT_LABEL: Record<string, string> = {
   manana: "mañana",
@@ -21,6 +23,9 @@ export function Ediciones() {
   const editions: DiarioEditionSummary[] = data?.editions ?? [];
   const allNotes = data?.notes ?? [];
   const [activeSlug, setActiveSlug] = useState<string>("");
+  const navRef = useScrollReveal<HTMLElement>();
+  const contentRef = useScrollReveal<HTMLElement>();
+  const animated = useRef(false);
 
   const edition = editions.find((e) => e.slug === (activeSlug || editions[0]?.slug)) ?? editions[0];
   const editionNotes = edition ? allNotes.filter((n) => n.editionSlug === edition.slug) : [];
@@ -29,6 +34,18 @@ export function Ediciones() {
     title: "Ediciones — LaDiarIA",
     description: "Archivo de ediciones anteriores del diario LaDiarIA.",
   });
+
+  // biome-ignore lint/correctness/useExhaustiveDependencies: solo animar al montar
+  useEffect(() => {
+    const el = contentRef.current;
+    if (!animated.current && el) {
+      const cards = el.querySelectorAll(".card");
+      if (cards.length) {
+        animated.current = true;
+        revealCards(Array.from(cards));
+      }
+    }
+  }, []);
 
   if (editions.length === 0) {
     return (
@@ -47,7 +64,7 @@ export function Ediciones() {
       </header>
 
       <div className="archive-layout">
-        <nav className="archive-nav reveal" aria-label="Ediciones anteriores">
+        <nav ref={navRef} className="archive-nav reveal" aria-label="Ediciones anteriores">
           <ul className="archive-list">
             {editions.map((e) => (
               <li key={e.slug}>
@@ -68,7 +85,8 @@ export function Ediciones() {
         </nav>
 
         <section
-          className="archive-content"
+          ref={contentRef}
+          className="archive-content reveal"
           aria-label={`Notas de ${edition?.label ?? "la edición"}`}
         >
           {editionNotes.length === 0 ? (

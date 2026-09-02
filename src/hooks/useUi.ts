@@ -6,7 +6,7 @@ type FontLevel = "" | "a" | "aa";
 function readTheme(): Theme {
   const saved = localStorage.getItem("ladiaria-theme");
   if (saved === "light" || saved === "dark") return saved;
-  return window.matchMedia?.("(prefers-color-scheme: dark)").matches ? "dark" : "dark";
+  return "dark";
 }
 
 function readFont(): FontLevel {

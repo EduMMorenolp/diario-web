@@ -41,7 +41,7 @@ function Toolbar() {
           <path d="M12 4v16" />
         </svg>
         <span className="toolbar-size" aria-hidden="true">
-          {font === "" ? "A" : font === "a" ? "A" : "A"}
+          {font === "" ? "A" : font === "a" ? "A+" : "A++"}
         </span>
       </button>
       <button

@@ -1,8 +1,11 @@
+import { useEffect, useRef } from "react";
 import { type DiarioEdition, type DiarioNota, formatEditionDate } from "../api/notas";
 import { ArticleCard } from "../components/ArticleCard";
 import { useMeta } from "../hooks/useMeta";
 import { useNotas } from "../hooks/useNotas";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 import { useSite } from "../hooks/useSite";
+import { animateEditionHead, revealCards } from "../lib/animations";
 
 interface CategoryInfo {
   slug: string;
@@ -39,9 +42,12 @@ export function Home() {
   const edition: DiarioEdition | null = data?.edition ?? null;
   const allNotes = data?.notes ?? [];
   const categories = data?.categories ?? [];
+  const featuredRef = useScrollReveal<HTMLDivElement>(0.05);
 
-  // Notas de la edicion vigente; fallback global si la edicion no trae notas o aun no existe.
-  const editionNotes = edition ? allNotes.filter((n) => n.editionSlug === edition.slug) : [];
+  // Notas de la edicion vigente + notas sin edicion (huérfanas); fallback global si no hay nada.
+  const editionNotes = edition
+    ? allNotes.filter((n) => n.editionSlug === edition.slug || n.editionSlug === null)
+    : [];
   const notes = edition && editionNotes.length > 0 ? editionNotes : allNotes;
 
   const featured =
@@ -60,6 +66,24 @@ export function Home() {
     description: edition?.briefing ?? site.descriptionSeo,
   });
 
+  // Animar cards del featured grid cuando cargan
+  const featuredAnimated = useRef(false);
+  useEffect(() => {
+    if (notes.length > 0 && !featuredAnimated.current) {
+      featuredAnimated.current = true;
+      revealCards(".featured-story .card, .featured-rail .card");
+    }
+  }, [notes.length]);
+
+  // Animar edition head al cambiar de edición
+  const prevEditionSlug = useRef(edition?.slug);
+  useEffect(() => {
+    if (prevEditionSlug.current !== edition?.slug) {
+      animateEditionHead();
+      prevEditionSlug.current = edition?.slug;
+    }
+  }, [edition?.slug]);
+
   if (notes.length === 0) {
     return (
       <div className="wrap home-empty">
@@ -74,14 +98,18 @@ export function Home() {
       <header className="edition-head">
         <p className="section-label">
           {edition
-            ? `Edición de ${edition.label} · ${formatEditionDate(edition.date)}`
+            ? `${edition.label} · ${formatEditionDate(edition.date)}`
             : "LaDiarIA"}
         </p>
         {edition?.briefing ? <p className="edition-briefing">{edition.briefing}</p> : null}
       </header>
 
       {featured && (
-        <section className="home-featured-grid reveal" aria-label="Nota de portada y tendencias">
+        <section
+          ref={featuredRef}
+          className="home-featured-grid reveal"
+          aria-label="Nota de portada y tendencias"
+        >
           <div className="featured-story">
             <ArticleCard nota={featured} lead />
           </div>
@@ -102,17 +130,42 @@ export function Home() {
       {groups.length > 0 && (
         <section className="home-sections" aria-label="Notas de la edición por sección">
           {groups.map((g) => (
-            <section key={g.key} className="home-section-group reveal">
-              <h2 className="section-block-title">{g.name}</h2>
-              <div className="home-grid">
-                {g.notes.map((n) => (
-                  <ArticleCard key={n.slug} nota={n} />
-                ))}
-              </div>
-            </section>
+            <SectionGroup key={g.key} group={g} />
           ))}
         </section>
       )}
     </div>
+  );
+}
+
+/** Sección de grupo con scroll reveal y stagger de cards */
+function SectionGroup({ group }: { group: { key: string; name: string; notes: DiarioNota[] } }) {
+  const ref = useScrollReveal<HTMLDivElement>();
+  const animated = useRef(false);
+
+  // biome-ignore lint/correctness/useExhaustiveDependencies: solo animar al montar
+  useEffect(() => {
+    const el = ref.current;
+    if (!animated.current && el) {
+      const grid = el.querySelector(".home-grid");
+      if (grid) {
+        const cards = grid.querySelectorAll(".card");
+        if (cards.length) {
+          animated.current = true;
+          revealCards(Array.from(cards));
+        }
+      }
+    }
+  }, []);
+
+  return (
+    <section ref={ref} className="home-section-group reveal">
+      <h2 className="section-block-title">{group.name}</h2>
+      <div className="home-grid">
+        {group.notes.map((n) => (
+          <ArticleCard key={n.slug} nota={n} />
+        ))}
+      </div>
+    </section>
   );
 }
