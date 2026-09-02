@@ -10,6 +10,11 @@ export function SectionNav({ categories = [] }: { categories: DiarioCategory[] }
     if (pathname) setOpen(false);
   }, [pathname]);
 
+  // Filtrar categoría "portada" para que no aparezca duplicada con el inicio
+  const sections = categories.filter(
+    (c) => c.slug !== "portada" && c.name.toLowerCase() !== "portada",
+  );
+
   return (
     <nav className="secnav" aria-label="Secciones del diario">
       <button
@@ -29,7 +34,7 @@ export function SectionNav({ categories = [] }: { categories: DiarioCategory[] }
             Portada
           </Link>
         </li>
-        {categories.map((c) => {
+        {sections.map((c) => {
           const active = pathname === `/empresa/${c.slug}`;
           const models = c.models ?? [];
           return (
@@ -62,15 +67,6 @@ export function SectionNav({ categories = [] }: { categories: DiarioCategory[] }
             </li>
           );
         })}
-        <li>
-          <Link
-            to="/ediciones"
-            className="secnav-item"
-            aria-current={pathname === "/ediciones" ? "page" : undefined}
-          >
-            Ediciones
-          </Link>
-        </li>
       </ul>
     </nav>
   );

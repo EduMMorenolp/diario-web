@@ -13,60 +13,11 @@
   },
   "editions": [
     {
-      "slug": "2026-09-06-noche",
-      "label": "Edicion 2026-08-31",
-      "date": "2026-09-06",
-      "slot": "noche",
-      "noteCount": 0
-    },
-    {
-      "slug": "2026-09-05-noche",
-      "label": "Edicion 2026-08-31",
-      "date": "2026-09-05",
-      "slot": "noche",
-      "noteCount": 0
-    },
-    {
-      "slug": "2026-09-04-noche",
-      "label": "Edicion 2026-08-31",
-      "date": "2026-09-04",
-      "slot": "noche",
-      "noteCount": 0
-    },
-    {
-      "slug": "2026-09-03-noche",
-      "label": "Edicion 2026-08-31",
-      "date": "2026-09-03",
-      "slot": "noche",
-      "noteCount": 0
-    },
-    {
-      "slug": "2026-09-02-noche",
-      "label": "Edicion 2026-08-31",
-      "date": "2026-09-02",
-      "slot": "noche",
-      "noteCount": 0
-    },
-    {
       "slug": "2026-09-01-noche",
       "label": "Edición 2026-08-31",
       "date": "2026-09-01",
       "slot": "noche",
       "noteCount": 1
-    },
-    {
-      "slug": "2026-08-30",
-      "label": "Edición 2026-08-30",
-      "date": "2026-08-30",
-      "slot": "diaria",
-      "noteCount": 0
-    },
-    {
-      "slug": "2026-08-30-noche",
-      "label": "Edición Test",
-      "date": "2026-08-30",
-      "slot": "noche",
-      "noteCount": 0
     }
   ],
   "categories": [

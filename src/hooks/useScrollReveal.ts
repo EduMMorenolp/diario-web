@@ -11,7 +11,7 @@ type RevealFn = (el: HTMLElement) => void;
  * @param animateFn — función de animación custom (default: revealSection de anime.js)
  */
 export function useScrollReveal<T extends HTMLElement = HTMLDivElement>(
-  threshold = 0.12,
+  threshold = 0.02,
   animateFn?: RevealFn,
 ) {
   const ref = useRef<T>(null);

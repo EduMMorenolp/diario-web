@@ -20,8 +20,11 @@ function slotLabel(slot: string | undefined): string {
 
 export function Ediciones() {
   const { data } = useNotas();
-  const editions: DiarioEditionSummary[] = data?.editions ?? [];
   const allNotes = data?.notes ?? [];
+  // Filtrar solo ediciones con notas reales (nunca mostrar ediciones vacías de 0 notas)
+  const editions: DiarioEditionSummary[] = (data?.editions ?? []).filter(
+    (e) => e.noteCount > 0 || allNotes.some((n) => n.editionSlug === e.slug),
+  );
   const [activeSlug, setActiveSlug] = useState<string>("");
   const navRef = useScrollReveal<HTMLElement>();
   const contentRef = useScrollReveal<HTMLElement>();

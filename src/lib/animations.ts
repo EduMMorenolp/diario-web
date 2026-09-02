@@ -55,21 +55,8 @@ export function animateMasthead() {
   pulseAccentDot();
 }
 
-/** Continuous subtle pulse on the masthead accent dot */
 export function pulseAccentDot() {
-  if (prefersReducedMotion()) return;
-  // The pseudo-element can't be directly targeted by anime.js,
-  // so we animate the masthead-link glow via a wrapper-safe approach
-  animate(".masthead-link", {
-    filter: [
-      "drop-shadow(0 0 0px transparent)",
-      "drop-shadow(0 0 6px var(--color-accent))",
-      "drop-shadow(0 0 0px transparent)",
-    ],
-    duration: 3000,
-    loop: true,
-    ease: "inOutSine",
-  });
+  // Dot pulsing is handled smoothly and crisply in CSS keyframes on ::after
 }
 
 // ---------------------------------------------------------------------------
@@ -216,20 +203,21 @@ export function animateFooter() {
     defaults: { ease: "outQuad" },
   });
 
-  tl.add(".footer-word", {
+  tl.add(".footer-brand", {
     opacity: [0, 1],
-    scale: [0.9, 1],
-    duration: 500,
+    translateY: [12, 0],
+    duration: 450,
   });
 
   tl.add(
-    ".site-footer p",
+    ".footer-col",
     {
       opacity: [0, 1],
-      translateY: [8, 0],
+      translateY: [16, 0],
       duration: 400,
+      delay: stagger(60),
     },
-    "-=300",
+    "-=250",
   );
 }
 

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
+import { Footer } from "./components/Footer";
 import { Masthead } from "./components/Masthead";
 import { SectionNav } from "./components/SectionNav";
 import { useNotas } from "./hooks/useNotas";
@@ -99,10 +100,10 @@ function SiteTheme() {
   const site = useSite();
   useEffect(() => {
     const root = document.documentElement;
-    root.style.setProperty("--color-accent", site.accentColor);
-    root.style.setProperty("--color-paper", site.darkBg);
-    root.style.setProperty("--color-inverse", site.darkBg);
-    root.style.setProperty("--color-paper-light", site.lightBg);
+    // Solo inyectar acento personalizado y favicon; los fondos los gestiona tokens.css según data-theme
+    if (site.accentColor) {
+      root.style.setProperty("--color-accent", site.accentColor);
+    }
     if (site.faviconUrl) {
       const link = document.head.querySelector<HTMLLinkElement>('link[rel="icon"]');
       if (link) link.href = site.faviconUrl;
@@ -128,7 +129,7 @@ function FooterReveal() {
           }
         }
       },
-      { threshold: 0.2 },
+      { threshold: 0.15 },
     );
 
     observer.observe(footer);
@@ -141,8 +142,8 @@ export default function App() {
   useUi();
   usePageTransition();
   const { data } = useNotas();
-  const site = useSite();
   const categories = data?.categories ?? [];
+  const editions = data?.editions ?? [];
 
   return (
     <>
@@ -161,10 +162,7 @@ export default function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
-      <footer className="site-footer reveal">
-        <span className="footer-word">{site.siteName || "LaDiarIA"}</span>
-        <p>{site.footerText}</p>
-      </footer>
+      <Footer categories={categories} editions={editions} />
       <FooterReveal />
     </>
   );
