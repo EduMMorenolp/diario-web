@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-03T00:00:00.169Z",
-  "updatedAt": "2026-09-03T00:00:00.169Z",
+  "generatedAt": "2026-09-03T02:36:30.531Z",
+  "updatedAt": "2026-09-03T02:36:30.531Z",
   "noteCount": 23,
   "edition": {
     "slug": "2026-09-02-noche",
@@ -12,6 +12,13 @@
     "featuredNoteSlug": null
   },
   "editions": [
+    {
+      "slug": "2026-09-03-noche",
+      "label": "Edicion 2026-08-31",
+      "date": "2026-09-03",
+      "slot": "noche",
+      "noteCount": 26
+    },
     {
       "slug": "2026-09-02",
       "label": "Edición 2026-09-02",
